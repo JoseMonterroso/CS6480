@@ -1,0 +1,195 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Class discussion summary\\
+HA 7.b\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section*{Discussion summary}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+This was a very old paper from 1988, that at the time was published 15 years after the internet
+was commercialized. The author makes a bold claim that information about the internet is generally 
+available but not well understood. I can agree with this because even in his own paper he didn't 
+really provide much detail regarding the implementation aspect of the internet. We than transitioned 
+into the meat of the paper. We discussed how DARPA's top level goal was to interconnect networks 
+together. Section three of the paper provides us with a list of goals which were established for the
+internet architecture. If the seven goals were listed in any different order the internet would have 
+been very different today. Lastly, during our discussion we noticed that security was not as important 
+back then, and thus creates bigger problems for us today. This paper helped me realize that the 
+process for the internet was not as crisp or elegant as I thought it was. 
+
+\item {\it Strengths and weaknesses:} 
+I can't really say for sure what the class consensus on this paper was. Not really much was said
+about the strengths or weaknesses of this paper during our class discussion. But on a personal 
+note, I can say that the age of this paper comes into play. For example, at the time of this paper's
+release back in 1988, this paper was already roughly 15 years late from the development of the DARPA
+net. This in turn begs the question what is the use of this paper. This paper helps readers understand a 
+little about why the internet was chosen to be the way it was and why it grew to become the way it is. 
+But that's about it. Even though this paper was a conference paper I felt 
+it was lacking content, especially when it came to architecture and implementation as well as TCP. 
+
+\item {\it Connection with other work:} 
+There really isn't any papers from our previous discussions that I can directly relate this paper to 
+because we have started a new section on internet architectures. However, what I can say is that 
+a lot of the things that are mentioned in this paper are the reasons why NFV and cloud computing 
+were implement the way they are today. 
+
+\item {\it Future work:}
+A few common things
+were mentioned. For example, this week we transitioned to learning about networking architectures,
+so it was brought up that we could look into or develop networking architectures. Ideally, these type
+of networks would have an emphasis on security and reliability. It was also mentioned that we could 
+find/create better ways to make the internet more accountable. Lastly, future work for the author himself
+would be to expand on this paper and to dive a little deeper into the details of datagrams and TCP. 
+
+\end{itemize}
+\end{document}
+
+\begin{comment}
+*Transition now to network architecture 
+
+*Very old paper, published in ACM SIGCOM conference 
+
+*paper published 15 years after the internet was commercialized
+
+*Claim that info about the internet is generally available but not  well understood 
+
+*IETF => RFCs
+
+*Top level goals for the DARPA was to interconnect networks together 
+
+*The process for the internet was not as crisp or elegant as we think it was
+
+*multi-media network = multi transport pipes/ multi transport network 
+	=> Argue it might have been efficient, but not as flexible or robust 
+	
+*AT\&T had monopoly 
+	=> can we build networks administered by other  companies
+	
+*The technique for multiplexing was packet switching 
+	=> most networks were already packet switched 
+	
+*Nodes
+	=> gateways
+	=> endpoint hosts
+
+*If the goals in section 3 were in different order the internet would have been very different today
+
+Phone networks had large centralized centers 
+	=> five or ten for the whole country 
+	=> that is why we have this as the top goal in section 3
+	
+Which section 2 goals are the best for todays
+	=> cost effective for todays commercialized internet
+	=> need to add security to the list of goals
+		=> easier to attack ppl rather than organizations
+
+For most attacks in the internet the attackers want the internet to stay up
+	=> no one can pay you back  
+	
+Motivation to stop the internet 
+	=> state hackers
+	
+The threat was nuclear attack from nation states
+	=> the threat today was potential taking down the internet 
+	
+Synchronization
+	=> it was the assumption in this architecture that synchronization would never be lost 
+	=> We can keep synchronization at the endpoints
+
+Fate-sharing
+	=> data only at the endpoints 
+	=> synchronization is stored in the host 
+	=> if you are gone then its okay for the state to be gone 
+	
+There is no check at an endpoint
+	=> can send more traffic than an endpoint can handle
+	
+TCP didn't work for the debugger
+	=> might impede the debugging info
+	=> a debugger protocol should not be reliable 
+
+Hard to have multiple services
+	=> proved more difficult than first hoped if the underlying network can not explicitly support it 
+	=> only so much you can do at the transort layer depending on the underlying tech 
+	
+
+You have an architecture but the architecture is lossy gooosy, but you ahve to implmement it in differentt ways
+the impliementation is important but it's hard to do this becasue ttheir is not enough detail for them to be made correctly 
+
+
+*Future work ideas
+	=> Changinf of the internet architecute
+	=>  possible or insentive to change it
+	=> Their future work would be to develop open flow, and write more in detail things like tcp things, futute internet architectures 
+	=> Better ways of internet accountability 
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

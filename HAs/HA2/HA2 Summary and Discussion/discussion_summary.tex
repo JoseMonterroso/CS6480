@@ -1,0 +1,111 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Class discussion summary\\
+HA 2.b\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section*{Discussion summary}
+
+\begin{itemize}
+
+\item {\it Summary:}
+We first discussed the definitions of containers and VMs. We defined containerization as a lightweight distribution
+of packaged applications for deployment and management. While VMs are about hardware allocation and
+management. Next we touched on the ideas of dependencies and life cycles of containers, this led to our 
+primary discussion on orchestration. An orchestration plan describes components, their dependencies and container life 
+cycles. Orchestration is needed for complex containers. Two orchestration 
+mechanisms listed in the paper are Mesos, and Kubernetes. We then discussed the Linux kernel and how it uses
+namespaces and control groups. Next we discussed how a container engine runs container
+images. These image are the realization of rules that containers need to follow. 
+One thing I failed to notice was the differences between micro-services and containers. Micro-services is the
+approach of developing a single application as a suit of small services; each running its own process. While 
+containers are the underlying technology that enables micro-services. 
+
+\item {\it Strengths and weaknesses:} 
+The consensus regarding the paper during the discussion was split. However, it seems that the weaknesses
+outweigh the strengths. For example, we all seemed to agree that the paper contained great content with 
+regards to the overall details covered and the amount of contented that was actually presented in the paper.
+The weaknesses of the paper lie within the paper format structure, the lack of figure and table explanations,
+and excessive repetition of recently presented ideas. My insights were actually identical to this as I brought 
+up these same points in my paper summary.
+
+\item {\it Connection with other work:} 
+From "A View of Cloud Computing," we were introduced to the idea of virtualization. To note, 
+virtualization is what allows cloud computing to work. However, that paper hardly, if any goes into specifics
+about virtualization in cloud computing. From reading HA2's paper we learn about containers and VMs, which
+are both types of virtualization. A small connection was that we brought up the idea of containers having
+their own IP address and acting as linux routers. This in fact, is what we will be implementing in our Lab 1
+assignment.  
+
+\item {\it Future work:} 
+We discussed the idea of added complexity when we use multiple apps within a container. This might
+be good future work because we could analyze time constraints, connectivity constraints, and provide
+a good orchestration solution to certain types of container complexities. Another Idea is the study of 
+Mesos and Kubernetes orchestration in various complex driven containers. 
+
+\end{itemize}
+\end{document}
+
+\begin{comment}
+*IEEE magazine that no longer exists
+	=> pretty successful but is no longer sponsored by IEEE
+	
+*Consensus was that this paper was not well organized 
+	=> repetition throughout the article 
+	
+*Paper had good content though  
+
+*Definitions of VMs versus containers 
+	=> Containers are its own separate process 
+	=> VM have to boot up 
+
+*They mention papers but do not explain it well
+	=> diagram was not explained well 
+	=> application tier was not explained well either 
+	
+*Dependencies, and life cycles about containers
+	=> started and stoping 
+
+*Orchestration is needed for containerization in more complicated things 
+	=> controlling the lifecycle of 
+
+*Linux
+	Namespaces: the kernel needs to have the ability to create this, different networking stack for each namespace
+	Control groups: enforcement and accountant that goes on. Resources use 
+	
+Container image is the realization of rules that it needs to follow 
+	=> file system union mount several file systems 
+	=> final layer is the writable container 
+	
+Container engine runs the images to start the container 
+
+*Containers can run multiple application 
+	=> doesn't have to run just one
+	
+In clusters we need to deal with data and networking
+	=> so we have links connected to a persistent state  (data volume)
+	=> network port mappings and container linking 
+	
+*Companies using proprietary stuff and then move to open source 
+	=> open source is complicated because they can have different goals and packages 
+	
+*Microservices vs container
+	=> MS: approach to developing a single application as a suite of small services; each running its own process
+		Application architecture, From Monolithic to multiple micro-services
+		
+	=> containers: is the underlying technology that enables micro-services 
+	
+*Orchestration
+	=>  Mesos: runs a different kernel in your own cluster 
+	=> kubernetes: higher level; yoou run processes on the docker host
+	
+*You can associate each container by adding one IP address for each container 
+	=> complicated/ complex 
+\end{comment}

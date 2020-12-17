@@ -1,0 +1,56 @@
+%% -*- mode: LaTeX -*-
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% This is the ``root file'' for the paper.
+%%
+\documentclass[11pt,twocolumn,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[plain]{fullpage}
+\usepackage{mathptmx}
+\usepackage{microtype}
+\usepackage{siunitx} % for 'S' table column type
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\graphicspath{{./figs/}}
+
+%%%%%
+
+\title{%
+  \bfseries
+  Radio Frequency Propagation Validation
+}
+\author{%
+  Jose Monterroso \\
+  University of Utah \\
+  \texttt{u1054133@utah.edu} \\
+  CFP: https://www.eucap.org/files/eucap2021-call-for-papers
+  %\href{https://www.eucap.org/files/eucap2021-call-for-papers}{EUCAP Call For Papers Link}
+}
+\date{}
+
+%%%%%
+
+\begin{document}
+\maketitle
+\input{abstract}
+\input{introduction}
+\input{background}
+\input{methodology}
+\input{evaluation}
+\input{related}
+
+\input{conclusion}
+\input{acknowledgments}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% End of file.

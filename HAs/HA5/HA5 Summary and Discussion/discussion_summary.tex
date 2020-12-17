@@ -1,0 +1,165 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Class discussion summary\\
+HA 5.b\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section*{Discussion summary}
+
+\begin{itemize}
+
+\item {\it Summary:}
+The first big topic that was discussed was that this paper was entered to a workshop.
+I missed that workshop papers would generally be shorter, and will be a bit different than
+papers we have read in the past. Next we jumped into the abstract, specifically the part that mentions their 
+goal. A point was brought up stating that it's a bit odd for them not to elaborate on their papers goal in the later
+sections. Even though they do in my opinion meet their goal, it's a bit odd that they didn't bring their goal up as a point
+of reference or motivation in the later sections. In the Introduction section one thing that I missed was the 
+difference in the use of network functions compared to other papers we have read. In previous papers
+there were more complex processes for NFV compared to this paper that dealt with packet forwarding. 
+The key characteristics of OpenNetVM was the use of a polling
+system, bypassing the Kernel, and Zero copy. What I missed here was that in order for you to bypass 
+the Kernel and do things the way you want them to be done you need to do a lot of low level things yourself. For
+example memory management of packets. Lastly, I'd like to mention the class confusion on the similarities
+and differences between service chains and flows. The paper made them seem interchangeable, but a few
+points were brought up that they weren't.
+
+\item {\it Strengths and weaknesses:}  
+The consensus of the class seemed to favor the paper. A strength 
+that was brought up was the abstract. It was a strength in the sense that it described the problem, offered
+a solution and talked a little about the outcome. We also thought their related works was a strength because
+it did a good job of presenting competing apps and how OpenNetVM solved their flaws.  A few weaknesses that 
+were discussed related to how the design principles were very similar to the design requirements for NFV 
+in previous papers we have read. This lead us to believe that they were a bit lazy in their approach. 
+Another weakness was brought up that their execution was a bit too narrow. They took all these different
+pieces and put them together. A thought was brought up on how many new things they really did or
+contributed to NFV research.
+
+\item {\it Connection with other work:} 
+There were a few general connections to other papers. Like NFV from our previous paper, and using Docker
+to create containers. DPDK was also brought up from one of our previous papers on NFV.
+
+\item {\it Future work:} 
+It was brought up that their orchestration and containers were all located within a single node. Ideally this could be
+expanded to orchestrating multiple nodes.
+
+\end{itemize}
+
+
+\end{document}
+
+\begin{comment}
+*This paper is a workshop paper 
+	=> A little different from research paper
+	=> Shorter paper 
+	=> Sitcom workshops are 
+	=> organizations attempt to explore type 
+	
+	
+*They followed through with their goal
+	=> Emphasized in the abstract, but rest of paper its hardly mentioned
+	=> they followed through with providing open source code 
+	
+*Pretty nice abstract 
+
+*Introduction emphasizes diffrent NFV processes 
+	=> more complex process for NFV in previous papers but not in this one; just packet forwarding 
+	
+*Key characteristics (Get Speed, but everything is pretty RAW; do a lot yourself) 
+	=> polling system
+	=> bypass the kernel 
+	=> Zero Copy: copy from NIC only once 
+	
+*Was the motivation with the execution to narrow
+	=> split feelings in the class 
+	=> Taken all the pieces and put them together (How much new have they done?) 
+
+*Design principles were very similar to last week papers
+	=> Design principle = the way you think of what you wanna do 
+
+*Follow up work from NetVM to openNetVM but switched from VM to Containers 
+	=> a necessary follow up to previous work 
+
+
+*Yes they have a manager but the manager is associated with a single node
+	=> orchestrating containers within a single node 
+	
+Related works was good 
+	=> Really dense area but want to be pretty explict with what they are using and adding 
+	
+Went over Fig 1 => in depth 
+	=> Memory management (Bypasses the Kernel)
+		=> allocates the appropriate packets coming in into the appropriate subset for containers 
+	=> NFLIb
+		=> It registers with a mangare, packet show up, then using callback function telling it what it needs to do
+	
+		
+	
+*Containers are just processes or groups of processes running 
+	
+*Service chains and flows seem similar in the way they describe them (STUCK ON THIS PART)
+	=> flows appear to be finer grain than a service chain 
+
+
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{newworld}
+{\sc Blumenthal, M., and Clark, D.}
+\newblock Rethinking the design of the internet: the end-to-end arguments vs
+  the brave new world.
+\newblock {\em Communications Policy in Transition: The internet and Beyond\/}
+  (Dec. 2001), 91--139.
+
+\bibitem{darpa}
+{\sc Clark, D.}
+\newblock The design philosophy of the darpa internet protocols.
+\newblock {\em ACM SIGCOM Computer Communication Review\/} (Aug. 1988).
+
+\bibitem{tussle}
+{\sc Clark, D., Wroclawski, J., Sollins, K., and R., B.}
+\newblock Tussle in cyberspace: defining tomorrow's internet.
+\newblock {\em SIGCOMM'02\/} (June 2005), 462--475.
+
+\end{thebibliography}

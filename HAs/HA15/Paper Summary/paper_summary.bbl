@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{ngmn}
+{\sc Alliance, N.}
+\newblock 5g white paper.
+
+\bibitem{flexran}
+{\sc Foukas, X., Nikaein, N., Kassem, M., Marina, M., and Kontovasilis, K.}
+\newblock Flexran: A flexible and programmable platform for software-defined
+  radio access networks.
+\newblock {\em CoNEXT '16: Proceedings of the 12th International on Conference
+  on emerging Networking EXperiments and Technologies\/} (Dec. 2016).
+
+\bibitem{5gwhite}
+{\sc group companies, N.}
+\newblock Making 5g a reality.
+\newblock {\em NEC White Paper\/} (Feb. 2018).
+
+\bibitem{nfv}
+{\sc Han, B., Gopalakrishnan, V., Ji, L., and Lee, S.}
+\newblock Network function virtualization: Challenges and opportunities for
+  innovations.
+\newblock {\em IEEE Communications Magazine\/} (Feb. 2015), 90--97.
+
+\end{thebibliography}

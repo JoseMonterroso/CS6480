@@ -1,0 +1,506 @@
+LAB 1 - NOTES
+# Code can be found on Github - Orchestrator
+
+
+PART1-
+DOWNLOADING DOCKER Script
+--------------------
+sudo apt-get update
+
+sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+
+sudo apt-get update
+
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+
+
+Dockerfile // Part1
+-------------
+FROM ubuntu
+
+RUN apt-get update
+RUN apt-get -y install bash iproute2 net-tools tcpdump vim iputils-ping
+RUN apt-get clean
+
+CMD ["bash"]
+
+
+
+docker-compose.yaml // PART 1
+------------------------
+version: '3'
+
+services:
+     r1:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net14:
+                    ipv4_address: 10.0.14.4
+               net15:
+                    ipv4_address: 10.0.15.4
+
+     ha:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net14:
+                    ipv4_address: 10.0.14.3
+
+     hb:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net15:
+                    ipv4_address: 10.0.15.3
+
+networks:
+     net14:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.14.0/24
+     net15:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.15.0/24
+
+
+
+RUNNING .YAML and DOCKERFILE (IN DIRECTIORY)
+----------------------------------------------
+docker-compose up -d
+
+
+OPENING DOCKER CONTAINERS
+--------------------------------
+docker ps
+docker network ls
+docker network inspect <Network Name>
+docker attach <docker container name>
+
+
+ADDING ROUTES TO DOCKER CONTAINERS FOR PING
+-----------------------------------------------
+route add -net <dest> gw <interface middle router connecting nodes>
+EX1: route add -net 10.0.19.0/24 gw 10.0.14.4 TO part1_ha_1
+EX2: route add -net 10.0.14.0/24 gw 10.0.19.3 TO part1_hb_1 
+
+
+
+
+
+
+
+PART2-
+Dockerfile // PART 2
+-------------
+FROM ubuntu
+
+RUN apt-get update
+RUN apt-get -y install bash iproute2 net-tools tcpdump vim iputils-ping
+RUN apt-get -y install quagga
+RUN apt-get clean
+
+CMD ["bash"]
+
+
+docker-compose.yaml // PART 2
+------------------------
+version: '3'
+
+services:
+     r1:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net14:
+                    ipv4_address: 10.0.14.4
+               net15:
+                    ipv4_address: 10.0.15.3
+               net17:
+                    ipv4_address: 10.0.17.3
+
+     r2:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net15:
+                    ipv4_address: 10.0.15.4
+               net16:
+                    ipv4_address: 10.0.16.3
+
+     r3:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net16:
+                    ipv4_address: 10.0.16.4
+               net18:
+                    ipv4_address: 10.0.18.4
+               net19:
+                    ipv4_address: 10.0.19.3
+
+     r4:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net17:
+                    ipv4_address: 10.0.17.4
+               net18:
+                    ipv4_address: 10.0.18.3
+
+     ha:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net14:
+                    ipv4_address: 10.0.14.3
+
+     hb:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net19:
+                    ipv4_address: 10.0.19.4
+
+networks:
+     net14:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.14.0/24
+     net15:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.15.0/24
+     net16:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.16.0/24
+     net17:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.17.0/24
+     net18:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.18.0/24
+     net19:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.19.0/24
+
+
+
+
+STOP CONTAINERS AND NETWORKS AND VOLUMES
+-----------------------------------------
+docker-compose down -v
+
+EXIT WITHOUT STOPPING IT
+----------------------------
+CTRL+P followed by CTRL+Q
+
+ADDING ROUTES TO DOCKER CONTAINERS FOR PING
+-----------------------------------------------
+route add -net <dest> gw <interface middle router connecting nodes>
+EX1: route add -net 10.0.19.0/24 gw 10.0.14.4 TO part2_ha_1
+EX2: route add -net 10.0.14.0/24 gw 10.0.19.4 TO part2_hb_1
+
+
+STEPS FOR QUAGGA 
+-----------------
+FIRST: in /etc/sysctl.conf uncomment net.ipv4.ip_forward=1
+
+SECOND:
+vim etc/quagga/daemons
+zebra=yes
+bgpd=no
+ospfd=yes
+ospf6d=no
+ripd=no
+ripngd=no
+
+THIRD:
+vim etc/quagga/zebra.conf
+!
+! Zebra configuration file
+!
+hostname Router
+password zebra
+enable password zebra
+!
+log stdout
+!
+!
+
+FOURTH:
+vim etc/quagga/ospfd.conf
+!
+interface ethX
+ ip ospf cost 10
+!
+router ospf
+ network 10.0.XX.0/24 area 0.0.0.0
+ network 10.0.XX.0/24 area 0.0.0.0
+!
+
+
+FIFTH: service zebra start
+	service ospfd start
+
+
+
+
+
+SCRIPT FOR SETUP
+-----------------
+#!/bin/bash
+# Docker container setup with OSPF and Zebra running 
+
+# Compose docker container topology
+docker-compose up -d
+
+# Array of container names
+declare -a arr=("r1" "r2" "r3" "r4")
+
+# zebra, daemons, and ospf conf files added, also starting up zebra and ospfd 
+for i in "${arr[@]}"
+        do
+                docker cp ./cfiles/shared/daemons part2_"$i"_1:/etc/quagga
+                docker cp ./cfiles/shared/zebra.conf part2_"$i"_1:/etc/quagga
+                docker cp ./cfiles/"$i"/ospfd.conf part2_"$i"_1:/etc/quagga
+                docker exec -it part2_"$i"_1 service zebra start
+                docker exec -it part2_"$i"_1 service ospfd start
+        done
+
+# Add Routes to ha and hb
+docker exec -it part2_ha_1 route add -net 10.0.19.0/24 gw 10.0.14.4
+docker exec -it part2_hb_1 route add -net 10.0.14.0/24 gw 10.0.19.3
+
+
+
+
+
+
+PART 3
+-----------
+
+TEMPORARY SCRIPT BELOW 
+-------------------- 
+
+#!/usr/bin/python
+
+import os
+import sys
+from optparse import OptionParser
+
+# Construct the initial topology shown in Figure 1(a)
+def initial_topology():
+    print("Initialize Topology")
+    os.system("docker-compose up -d ha r1 r2 r3 hb")
+
+# Start OSPF daemons in the routers in the routed topology
+def start_OSPF():
+    print("Starting OSPF on Topology")
+
+    # List of container names
+    containers = ['r1', 'r2', 'r3']
+
+    # zebra, daemons, and ospf conf files added, also starting up zebra and ospfd
+    for c in containers:
+        os.system("docker cp ./cfiles/shared/daemons part3_"+ c + "_1:/etc/quagga")
+        os.system("docker cp ./cfiles/shared/zebra.conf part3_"+ c + "_1:/etc/quagga")
+        os.system("docker cp ./cfiles/"+ c +"/ospfd.conf part3_"+ c +"_1:/etc/quagga")
+        os.system("docker exec -it part3_"+ c +"_1 service zebra start")
+        os.system("docker exec -it part3_"+ c +"_1 service ospfd start")
+
+# Install routes on each host/endpoint connected to your topology
+def endpoint_routes():
+    print("Adding routes to endpoints")
+
+    # Adding routes to 'ha' and 'hb'
+    os.system("docker exec -it part3_ha_1 route add -net 10.0.19.0/24 gw 10.0.14.4")
+    os.system("docker exec -it part3_hb_1 route add -net 10.0.14.0/24 gw 10.0.19.3")
+
+# Be able to add R4 to the routed topology and start OSPF on it
+def add_R4():
+    print("Adding R4 with OSPF")
+
+    # Adding R4 container to the other topologies 
+    os.system("docker-compose up -d r4")
+
+    # For R4, zebra, daemon, and ospf conf files added, also starting up zebra and ospfd
+    os.system("docker cp ./cfiles/shared/daemons part3_r4_1:/etc/quagga")
+    os.system("docker cp ./cfiles/shared/zebra.conf part3_r4_1:/etc/quagga")
+    os.system("docker cp ./cfiles/r4/ospfd.conf part3_r4_1:/etc/quagga")
+    os.system("docker exec -it part3_r4_1 service zebra start")
+    os.system("docker exec -it part3_r4_1 service ospfd start")
+
+# Ability to move traffic on the "north" path (R1, R2, R3)
+def north_path():
+    print("North Path")
+
+    #R1
+    os.system("docker exec -it part3_r1_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 5'"'")
+    os.system("docker exec -it part3_r1_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth2'"' -c '"'ip ospf cost 10'"'")
+
+    #R2
+    os.system("docker exec -it part3_r2_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth0'"' -c '"'ip ospf cost 5'"'")
+    os.system("docker exec -it part3_r2_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 5'"'")
+
+    #R3
+    os.system("docker exec -it part3_r3_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth0'"' -c '"'ip ospf cost 5'"'")
+    os.system("docker exec -it part3_r3_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 10'"'")
+
+    #R4
+    os.system("docker exec -it part3_r4_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth0'"' -c '"'ip ospf cost 10'"'")
+    os.system("docker exec -it part3_r4_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 10'"'")
+
+# Ability to move traffic on the "south" path (R1, R4, R3)
+def south_path():
+    print("South Path")
+
+    #R1
+    os.system("docker exec -it part3_r1_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 10'"'")
+    os.system("docker exec -it part3_r1_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth2'"' -c '"'ip ospf cost 5'"'")
+
+    #R2
+    os.system("docker exec -it part3_r2_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth0'"' -c '"'ip ospf cost 10'"'")
+    os.system("docker exec -it part3_r2_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 10'"'")
+
+    #R3
+    os.system("docker exec -it part3_r3_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth0'"' -c '"'ip ospf cost 10'"'")
+    os.system("docker exec -it part3_r3_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 5'"'")
+
+    #R4
+    os.system("docker exec -it part3_r4_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth0'"' -c '"'ip ospf cost 5'"'")
+    os.system("docker exec -it part3_r4_1 vtysh -c '"'configure terminal'"' -c '"'router ospf'"' -c '"'interface eth1'"' -c '"'ip ospf cost 5'"'")
+
+# Remove router R2 from the topology 
+def remove_R2():
+    print("Removing R2")
+
+    # Removing R2 Container
+    os.system("docker exec -it part3_r2_1 service zebra stop")
+    os.system("docker exec -it part3_r2_1 service ospfd stop")
+    os.system("docker-compose rm -f -s -v r2")
+
+# Main Function 
+def main():
+    # Establishing iCommandline Args
+    parser = OptionParser()
+    parser.add_option('-i', '--initial_topo', action='store_true',
+            dest='topology', default=False, help='Construct Initial Topology (Figure 1(a))')
+    parser.add_option('-o', '--ospf', action='store_true',
+            dest='ospf', default=False, help='Start OSPF in routed topology')
+    parser.add_option('-p', '--add_routes', action='store_true',
+            dest='routes', default=False, help='Install routes on each host')
+    parser.add_option('-a', '--add_router4', action='store_true',
+            dest='r4', default=False, help='Add R4 to the routed topology with OSPF')
+    parser.add_option('-n', '--north', action='store_true',
+            dest='north', default=False, help='Move traffic to north path')
+    parser.add_option('-s', '--south', action='store_true',
+            dest='south', default=False, help='Move traffic to south path')
+    parser.add_option('-r', '--remove_router2', action='store_true',
+            dest='r2', default=False, help='Remove router R2 from the topology')
+    (options, args) = parser.parse_args()
+
+    # Chossing which option to follow through
+    if options.topology:
+        initial_topology()
+    elif options.ospf:
+        start_OSPF()
+    elif options.routes:
+        endpoint_routes()
+    elif options.r4:
+        add_R4()
+    elif options.north:
+        north_path()
+    elif options.south:
+        south_path()
+    elif options.r2:
+        remove_R2()
+    else:
+        print("Need one Argument. Use -h for assistance")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

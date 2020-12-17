@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{http3}
+{\sc Bishop, M.}
+\newblock Hypertext transfer protocol version 3.
+
+\bibitem{5gwhite}
+{\sc group companies, N.}
+\newblock Making 5g a reality.
+\newblock {\em NEC White Paper\/} (Feb. 2018).
+
+\bibitem{commercial5g}
+{\sc Narayanan, A., Ramadan, E., Carpenter, J., Liu, Q., Liu, Y., Qian, F., and
+  Zhang, Z.}
+\newblock A first look at commercial 5g performance on smartphones.
+\newblock {\em WWW '20: Proceedings of The Web Conference 2020\/} (Apr. 2020).
+
+\bibitem{measurementstudy}
+{\sc Xu, D., Zhou, A., Zhang, Z., Wang, G., Liu, X., An, C., Shi, Y., Liu, L.,
+  and Ma, H.}
+\newblock Understanding operational 5g: A first measurement study on its
+  coverage, performance and energy consumption.
+\newblock {\em SIGCOMM '20: Proceedings of the Annual conference of the ACM
+  Special Interest Group on Data Communication on the applications,
+  technologies, architectures, and protocols for computer communication\/}
+  (July 2020), 479--494.
+
+\end{thebibliography}

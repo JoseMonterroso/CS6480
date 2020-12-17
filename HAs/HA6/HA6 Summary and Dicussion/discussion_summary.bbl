@@ -1,0 +1,10 @@
+\begin{thebibliography}{1}
+
+\bibitem{opennetvm}
+{\sc Zhang, W., Liu, G., Zhang, W., Shah, N., Lopreiato, P., Todeshi, G.,
+  Ramakrishnan, K., and Wood, T.}
+\newblock Opennetvm: A platform for high performance network service chains.
+\newblock {\em HotMiddlebox '16: Proceedings of the 2016 workshop on Hot topics
+  in Middleboxes and Network Function Virtualization\/} (Aug. 2016), 26--31.
+
+\end{thebibliography}

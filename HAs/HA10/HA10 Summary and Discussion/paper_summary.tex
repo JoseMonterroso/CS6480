@@ -1,0 +1,144 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 10.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{Title of paper: Making 5G a Reality}
+
+Paper discussed in this summary is ``Making 5G a Reality''~\cite{5gwhite}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:}
+This paper is a white paper relating to 5G technologies. Furthermore, homework assignment Ha9.a covered
+the first half of this paper. For this homework assignment we will cover the second half of this paper. This 
+paper is an analysis of the Third Generation Partnership Project (3GPP) 5G specifications. 
+
+\item {\it Context:}
+The technical area of this paper relates to 5G specifications and the impact on Business Support Systems 
+(BSS) and Operational Support Systems (OSS). Furthermore, in the second half of this paper we cover the 
+migration and interworking of 5G. As mentioned before this paper relates to most of our previously discussed 
+papers. 5G will require the use of cloud computing and NFV to promote an agile and flexible network. 
+
+\item {\it Assumptions:}  
+During the reading of the second half of this paper there weren't any outstanding assumptions that the authors
+made. The only overall assumption I noticed was that the authors assume the reader has prior knowledge of the 
+4G infrastructure, this is because most if not all their 5G definitions relay on 4G equivalent technologies. 
+
+\item {\it Contributions:}
+The goal of this white paper still remains to bring information regarding 5G from 3GPP standardization
+perspective and implications on BSS/OSS. It's paper contributes by bringing 5G information and implications
+to CEOs and 5G product developers. 
+
+\item {\it Clarity:} 
+This paper from what I have read is not written poorly, but simply requires the reader to be well acquainted 
+with 4G technologies, as well as computer networking jargon, and 5G abbreviations. 
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+5G with 100\% coverage will not be available day one, so we need migration steps from 4G to 5G. The first step
+for 5G is NSA, this means that 5G will work using the 4G core. Through the use of an upgraded EPC operators
+can provide high data rate services and radio capacity to smart devices without waiting for the full 5G system to be 
+rolled out. We then slightly touch on different methods to introduce 5G to the world, this highly depends on whether we have
+initial investment into 5G technology for the area. Having different forms of migration means we need to consider different
+forms of security. The primary idea is that when a UE connects to a 5G network the 5G security checks will be applied,
+however in NSA with a combined network the UE will adhere to 4G security and will have limited access to 5G networks. Furthermore, 
+security and access rights are checked when attaching to 4G or 5G networks, but also during handover between the two
+networks. 5G will bring more choice to the user with regards to internet services, these services will be provided over any
+type of network and services will become real-time and on-demand. Businesses will need to be ready day one to provide on 
+demand services to different network slice customers. Similarly, the OSS environment will have to adapt to the impact of 5G. 
+OSS will have to support delivery of complex services across different infrastructures. 
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+The latter half of the paper had way less abbreviations and spent more of its time explaining the implications of 5G 
+on existing businesses, and how those business should prepare themselves for the new 5G capabilities. I think the
+figures in the latter half of the paper did a great job of visualizing end-to-end path using NFV technology, and the 
+end-to-end orchestration architecture. However, I do wish that some of the other figures had better captions to 
+explain what was going on in detail.  
+
+\item {\it Weaknesses:} 
+There were lots of cases throughout the latter half of the paper where bullet points were used. I think in order to make
+the paper more readable the authors of the white paper should have divided the text into subsections or potentially 
+have used a table to list some of the main bulleted points. Lastly, I wish they have spent more time on the details
+surrounding the issues of end-to-end orchestration in 5G technologies using AI. I feel that orchestration has been 
+such a major part of new internet technologies like cloud based services and NFV, so for them to not go in depth
+on orchestration was a mistake. 
+
+\item {\it Questions:} 
+I've actually never have heard or have seen the use of the term 'omni-channel ecosystem' so I look forward to 
+researching the term. Also, the white paper mentions that lots of partner onboarding and sharing will occur in 5G,
+however, I question this because I'm not sure if companies will play nice with each other and be willing to share. 
+
+\item {\it Interesting citations:}
+Upon the beginning of the reading for the second half of the paper we touch on the idea of E-UTRA ~\cite{3gppeutra}.
+E-UTRA is the NSA version of 5G that relies on the 4G core. I'm curious to find out more about the 
+implications of using the 4G core for 5G devices.  
+
+\item {\it Possible improvements:} 
+No many improvements for the latter half of the paper. However, I would have liked to have seen a more in depth
+take on 5G orchestration. Furthermore, I think they could have formatted their white paper a bit better in section
+4 by providing subsections. By effectively organizing their subsections they have a better chance of delivering 
+their main points to the readers. 
+
+\item {\it Future work:} 
+I had a few ideas of future work relating to the latter half of this white paper. For example, how effective will the NSA
+5G phase conversion be with regards to latency and data speeds. A measurement study could be done for this. 
+Secondly, I was thinking of testing and checking handover security and speeds when switching from a 4G to
+5G network or vice versa. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

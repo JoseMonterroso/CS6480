@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{detectinglte}
+{\sc Balasingam, A., Bansal, M., Misra, R., Nagaraj, K., Tandra, R., Katti, S.,
+  and Schulman, A.}
+\newblock Detecting if lte is the bottleneck with bursttracker.
+\newblock {\em MobiCom '19: The 25th Annual International Conference on Mobile
+  Computing and Networking\/} (Aug. 2019).
+
+\bibitem{falcon}
+{\sc Falkenberg, R., and Wietfeld, C.}
+\newblock Falcon: An accurate real-time monitor for client-based mobile network
+  data analytics.
+\newblock {\em 2019 IEEE Global Communications Conference (GLOBECOM)\/} (Dec.
+  2019).
+
+\bibitem{5gwhite}
+{\sc group companies, N.}
+\newblock Making 5g a reality.
+\newblock {\em NEC White Paper\/} (Feb. 2018).
+
+\bibitem{breakinglte}
+{\sc Rupperecht, D., Kohls, K., Holz, T., and Popper, C.}
+\newblock Breaking lte on layer two.
+\newblock {\em 2019 IEEE Symposium on Security and Privacy (SP)\/} (May 2019).
+
+\bibitem{spectralefficiency}
+{\sc Um, J., Kim, I., and Park, S.}
+\newblock A method for analyzing spectral efficiency using real-field
+  measurement data.
+\newblock {\em 2018 International Conference on Information and Communication
+  Technology Convergence (ICTC)\/} (Oct. 2018).
+
+\end{thebibliography}

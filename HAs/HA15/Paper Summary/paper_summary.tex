@@ -1,0 +1,126 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 15.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{FlexRAN: A Flexible and Programmable platform for Software-Defined Radio Access Networks}
+
+Paper discussed in this summary is ``FlexRAN: A Flexible and Programmable platform for Software-Defined Radio Access Networks''~\cite{flexran}.
+
+\subsection{First pass information}
+\label{sec:first}
+\begin{enumerate}
+\item {\it Category:}
+
+This paper is a description of a research prototype. The research prototype being discussed is FlexRAN. FlexRAN is the 
+worlds first open-source SD-RAN platform. And in this paper we dive into the implementation and mechanics of FlexRAN.
+
+\item {\it Context:} 
+
+The technical area of this paper relates to Radio Access Networks (RAN). In fact we also touch onto elements of NFV~\cite{nfv}
+and 5G~\cite{5gwhite}. 
+
+\item {\it Assumptions:} 
+
+They assume that they are the first Open source RAN platform. I'm actually not familiar with RAN. so I can't say for sure
+if FlexRAN is the first. Furthermore, they assume that SDN is highly needed to manage a lot of time requirements for 5G. 
+I think the assumption is true as far as saying that SDN can add more to RAN but it is still up to the user to define how 
+SDN can be used to improve RAN.
+
+\item {\it Contributions:} 
+
+The authors of this paper have a bulleted list of contributions. First, they contribute by creating FlexRAN which incorporates an
+API for clean separation of control and data planes. They also contribute by implementing FlexRAN over the OpenAirInterface 
+LTE platform. And lastly, they show results from using FlexRAN in a diverse set of use cases relevant to current and future mobile
+networks. 
+
+\item {\it Clarity:} 
+
+From what I have read this paper is written well and appears to be professional.
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+
+\begin{itemize}
+\item {\it Summary:}
+
+FlexRAN at the time of its creation was the world's first open-source SD-RAN. FlexRAN incorporates an API to 
+separate the control and data planes. It offers programmability at two levels, one in the form of RAN control and 
+management applications that can be built over the FlexRAN controller and the other within the controller to be 
+able to upgrade the implementation of any control function in real time. Furthermore, FlexRAN is transparent to
+UEs. For FlexRAN, eNodeBs only handle the data plane to perform all the action-related functions. The northbound
+API, allows RAN control and management applications to modify the state of the network infrastructure. While the 
+southbound API is the primary enabler for SDN control of the RAN. To allow flexible and programmable control of the
+RAN, the FlexRAN agent provides multiple eNodeB control modules. Each module controls subsystems targeting a
+specific area of control. Without going to much into detail FlexRAN uses more CPU utilization and memory than that
+compared to OAI. However, both FlexRAN and OAI experienced the same service quality. Lastly, FlexRAN proves to 
+a useful tool for the SD-RAN platform. 
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:}
+
+I liked the abstract and introduction because they do good job of explaining RAN and why most SD-RAN platforms
+out there do not really help or are physically built to make RAN better. The overall format of this paper was well done. I especially 
+enjoyed the little overview section at the beginning that prepped me for the in-depth FlexRAN. Another strength was 
+the system evaluation section, I thought it was very thoughtful they they included the specs of machines used for their
+evaluation. FlexRAN use cases bring up an interesting and applicable solutions for SD-RAN. I think it's a great idea for 
+them to take into account what SD-RAN could do, however, this might not be the right paper for this.
+
+\item {\it Weaknesses:} 
+
+Although the introduction was a nicely written section, I felt that their contributions at the end of the section were weak.
+They didn't really feel like contributions, in fact it felt like they were simply describing the future sections of the paper. 
+I think it's a bit of a stretch to envision an online VSF store similar to mobile app stores, given that VSF are an inherently 
+important aspect of the FlexRAN system. Another thing I didn't like in this paper was the Extending OpenAirInterface with 
+FlexRAN section, it didn't really contribute to the paper, but rather felt like a self-praise by the authors who had to write 10,000
+lines of code to integrate FlexRAN into OAI. I do have to say that their evaluation section was a bit weak, and short compared to
+the build up of introducing FlexRAN and the design behind FlexRAN. 
+
+\item {\it Questions:} 
+
+I'm not sure what pub/sub communication is. I also have questions as to what the RRC, MAC/RLS,  and PDCP protocols are
+in LTE. I'm also not familiar with heterogenous networks. 
+
+\item {\it Interesting citations:} 
+
+The 5G white paper in class was good, but relied heavily on previous 4G technologies to explain 5G components and 
+differences. Because of this I feel that I do not have a good foundation or even good knowledge of 5G, that is why I am
+picking the NGMN~\cite{ngmn} white paper on 5G. 
+
+\item {\it Possible improvements:} 
+
+A few statements were constantly repeated throughout the paper. I believe removing these repeated statements will 
+improve the paper. I wish they cut down their introduction sections and went more in depth for the evaluation section. 
+
+\item {\it Future work:} 
+
+I think this can definitely extend to 5G NSA or standalone infrastructures. I would also like to expand the master control
+to work on non-linux systems. Furthermore, FlexRAN is not tied down to specific RAN so the possibilities are endless. Lastly,
+because this is new technologies there are a variety of places or things this technology could apply to and improve.
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+

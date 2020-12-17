@@ -1,0 +1,151 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 7.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{The Design Philosophy of the DARPA Internet Protocols}
+
+Paper discussed in this summary is ``The Design Philosophy of the DARPA Internet Protocols'~\cite{openflow.wp}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:} 
+
+This paper is a bit old, but it's a paper on the analysis of an existing system. The existing system being analyzed is the 
+the internet design from DARPA from 1988. 
+
+\item {\it Context:} 
+
+The technical area of this paper relates to internet protocols. The paper mentions IP, TCP, and other ISO protocols. 
+This paper does not relate to any papers we have read in the class. However, TCP, IP, and ISO protocols are some 
+of the things I learned in undergraduate networks. 
+
+\item {\it Assumptions:} 
+
+The author makes the assumption that DARPA papers and specification of internet protocols are difficult to read
+and therefore he has to make this paper to help people understand the early reasoning which shaped the internet. 
+Honestly, I've never seen or read any DARPA papers so I can't validate the assumption but some of the references
+he mentions are about 40 plus pages in length.
+
+\item {\it Contributions:} 
+
+This paper attempts to capture some of the early reasoning which shaped the Internet protocols. He does 
+mention that DARPA papers and specifications are hard to read so he contributes by providing a summary 
+of the 1988 internet and its protocols. 
+
+\item {\it Clarity:} 
+
+From what I have read from this paper it seems to be well written. The paper is easy to read and offers some great 
+insights into the world of computer networking from 1988.
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+
+This paper describes a view of the original objectives of the internet architecture. Furthermore, it 
+discusses the goals of this view (for the internet) and explains some of the important features of the 
+protocols. The main goal for DARPA at the time was to create and develop a great technique for 
+interconnecting and thus utilizing existing networks. At the time the internet was described to be: a
+packet switched communications facility in which a number of distinguishable networks were connected
+together using packet communications processors called gateways. Later in the paper was discussed a few second level goals that solidify the meaning of
+DARPA's internet. DARPA's internet was designed to operate in a military context, that is why goal
+number one is that communications must continue despite loss of networks or gateways. We then
+touch a little on the architecture and engineering of the internet, datagrams, and TCP.
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+
+I thought the abstract and the introduction were really straightforward and did a great
+job of introducing the problem at hand. I also think having the list of goals of the internet at the beginning before 
+going into depth for each goal was a strength because it offered a nice overview rather than listing a bunch of
+topics related to the internet. It's always nice to have the 'why' at the beginning. Lastly, I really like how the author
+provided little examples for pretty much every little point he made. 
+
+\item {\it Weaknesses:} 
+
+The author mentioned a lot of troubles with people and networking. He mentions the problem and explains why 
+they are problems but doesn't really offer any help. For example, the problem with implementing everything at the
+endpoints. He describes the problem, but all he says is that people mess up and need to do better (i.e. problems 
+happen all the time). Another example is when he discussed the simulator he simply states ``we do not have a 
+good idea on how to offer guidance..." Although he does meet his goal of discussing the intended idea behind the internet
+and offering background information, I do feel that he could have added more to his paper. Even though this paper is 
+old, I feel that all he is doing is combining typical internet concepts and providing a broad summary. 
+
+\item {\it Questions:} 
+
+The paper mentions that the first internet was a connection of a variety of networks. I wonder how easy or hard it
+was for them to connect these networks so that they can all operate with datagrams. 
+
+\item {\it Interesting citations:} 
+
+In undergraduate computer networks, I enjoyed learning about TCP. I remember studying the different 
+state machines that related to each TCP version. So I find the TCP~\cite{tcp} RFC from 1981 to be an 
+interesting read. 
+
+\item {\it Possible improvements:} 
+
+The author discusses how TCP went through a few versions before settling on the current one at the time. I would 
+liked to have seen figures of these transformations and how each version improved and why. In the general sense
+I do think tables of figures would have greatly improved this paper. 
+
+\item {\it Future work:}
+
+This paper offers a small introduction to the world of the 1988 internet. I think it would be interesting to do a paper on
+how the internet has shifted to the way we do things now. The author also mentions a `simulator',  and how difficult it 
+was to create at the time, I'm curious if this is still the case today.
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

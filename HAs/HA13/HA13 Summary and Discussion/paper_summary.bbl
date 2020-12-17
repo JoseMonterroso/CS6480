@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{p4}
+{\sc Bosshart, P., Daly, D.~Gibb, G., Izzard, M., Mckeown, N., Rexford, J.,
+  Schlesinger, C., Talayco, D., Vahdat, A., Varghese, G., and Walker, D.}
+\newblock P4: programming protocol-independent packet proocessors.
+\newblock {\em ACM SIGCOM Computer Communication Review\/} (July 2014).
+
+\bibitem{mobilestream}
+{\sc Cho, J., and Stutsman, R. Van der~Merwe, J.}
+\newblock Mobilestream: a scalable, programmable and evolvable mobile core
+  control plane platform.
+\newblock {\em CoNext '18: Proceedings of the 14th International Conference on
+  emerging Networking EXperiments and Technologies\/} (Dec. 2018).
+
+\bibitem{5gwhite}
+{\sc group companies, N.}
+\newblock Making 5g a reality.
+\newblock {\em NEC White Paper\/}.
+
+\bibitem{turboepc}
+{\sc Shah, R., Kumar, V., Vutukuru, M., and Kilkarni, P.}
+\newblock Turboepc: Leveraging dataplane programmability to accelerate the
+  mobile packet core.
+\newblock {\em SOSR '20: Proceedings of the Symposium on SDN Research\/} (Mar.
+  2020).
+
+\end{thebibliography}

@@ -1,0 +1,135 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 16.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{A First Look at Commercial 5G Performance on Smartphones}
+
+Paper discussed in this summary is ``A First Look at Commercial 5G Performance on Smartphones''~\cite{commercial5g}.
+
+\subsection{First pass information}
+\label{sec:first}
+\begin{enumerate}
+
+\item {\it Category:} 
+This paper is an analysis of an existing system. The analysis is on commercial 5G using commercial smartphones.
+
+\item {\it Context:} 
+The technical area of this work relates to 5G and its use of mmWave technology, and mid-band 5G operating at 
+2.5 GHz. Our 5G paper~\cite{5gwhite} discussed similar topics such as 5G architecture, commercialization, and 
+benefits and drawbacks of 5G. A similar measurement study ~\cite{measurementstudy} on 5G was conducted but 
+rather than multiple cities, a single campus was chosen.
+
+\item {\it Assumptions:}  
+I didn't catch any assumptions during my first pass of the paper. 
+
+\item {\it Contributions:} 
+The author's contributions are as follow: they develop practical and sound measurement methodologies for 5G 
+networks on COTS smartphones, they present timely measurement findings of mmWave5G and mid-band 5G 
+performance on smartphones with key insight, and lastly they release their measurement dataset (5Gophers) 
+to the research community. 
+
+\item {\it Clarity:} From what I have read during the first pass, this paper appears to be well written. 
+
+\end{enumerate}
+\subsection{Second pass information}
+\label{sec:second}
+\begin{itemize}
+
+\item {\it Summary:} 
+The authors of this paper conduct a measurement study on commercial 5G. They study three major 5G carriers: 
+Verizon, T-Mobile, and Sprint. Sprint uses mid-band 5G operating at 2.5 GHz while Verizon and T-Mobile use 
+mmWave technology. This study can be boiled down too few main points. First, an overview of 
+today's 5G performance. MmWave 5G throughput significantly outperforms mid-band 5G, however because of 
+5G's current NSA, 5G offers little latency improvement. Next they investigate 5G performance on Stationary UE,
+They find that commercial 5G offers much higher throughput than 4G. They also investigate mobility performance
+of mmWave on a moving UE. They discover that 4G-5G handoffs can be triggered frequently by either network
+conditions or user traffic. Mid-band 5G offers better performance due to its omni-directional radio. Next they
+discover that mmWave exhibits a statistically higher throughput variation compared to 4G, due to mmWave's
+sensitivity to the environment. Lastly, they study application performance over mmWave 5G and discover that
+for web browsing today's 5G brings benefits only for large web pages. For HTTPS download, goodput is 
+significantly lower than the available mmWave 5G bandwidth. To conclude, mmWave 5G's high bandwidth 
+does not always translate to a better application QoE. 
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+The introduction did a good job of introducing what they will be studying in commercial 5G. Regarding
+the introduction section, I really thought it was a plus to have a brief overview of their findings in the later half of the 
+section. Although I do not agree with the specifics of their measurement methodology I think they did a good job
+of explaining what they did and why effectively. Their use of box and whisker plots make reading and understanding
+their graphs better. I really thought their section 5 on how they set up their experiment and why they believe they 
+got the results they did was awesome. A potential strength of this paper is that the authors do a little bit of every type
+of measurement for UE's in 5G.
+
+\item {\it Weaknesses:}
+Their conclusion was very weak, it read like a copy paste of the introduction's contribution section. I can see why
+they coupled their background section with their related works. They claim they are the first commercial 5G 
+measurement study, however, the types of things they are measuring and the way they are measuring are not 
+new things, and therefore, they could have found or sought to do similar measurement techniques from 4G which 
+could have offered them more related works. I know most phones do not have 5G radios but I believe they should 
+have used more than one type of phone for all their studies, because at that point it becomes a study of the cellphone
+on 5G rather than on 5G itself. I'd also like to point out that a lot of information was being restated in the introduction,
+section 4, section 5, and the conclusion.
+
+\item {\it Questions:}
+I find it a bit funny when they mention 2019 marks the year for 5G which was eventually rolled out for commercial
+services to consumers, given that most of Asia has had 5G for a few years now. I'm still not sure what the authors
+meant by saying ``due to ultra-high bandwidth of 5G the bottleneck of an end-to-end path may potentially shift from
+the wireless hop of the internet."
+
+\item {\it Interesting citations:} 
+I was unaware of the creation and rise of HTTP3 so when they mentioned HTTP3~\cite{http3} during this paper
+I had to go out and check it out. I remember doing my first network assignment that related to HTTP and how
+familiar I had to become with the rules, so I am intrigued about the new rules and what HTTP3 can bring to the
+internet. 
+
+\item {\it Possible improvements:} 
+They can improve their conclusion by providing more information about various key points throughout the 
+paper. 
+
+
+
+\item {\it Future work:} 
+I think a similar study can occur when 5G grows to using the standalone deployment method. Furthermore,
+this type of study can expand to other UE's and other cities. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

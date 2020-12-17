@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+     r1:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net14:
+                    ipv4_address: 10.0.14.4
+               net15:
+                    ipv4_address: 10.0.15.4
+
+     ha:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net14:
+                    ipv4_address: 10.0.14.3
+
+     hb:
+          build: .
+          stdin_open: true
+          tty: true
+          cap_add:
+               - ALL
+          privileged: true
+          networks:
+               net15:
+                    ipv4_address: 10.0.15.3
+
+networks:
+     net14:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.14.0/24
+     net15:
+          ipam:
+               driver: default
+               config:
+                    - subnet: 10.0.15.0/24

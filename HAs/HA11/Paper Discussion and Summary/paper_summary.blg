@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper_summary.aux
+The style file: acm.bst
+Database file #1: biblio.bib
+I was expecting a `,' or a `}'---line 371 of file biblio.bib
+ :  
+ :  issue_date = {February 2018},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in 5gwhite
+You've used 3 entries,
+            2253 wiz_defined-function locations,
+            544 strings with 4517 characters,
+and the built_in function-call counts, 968 in all, are:
+= -- 86
+> -- 61
+< -- 0
++ -- 26
+- -- 22
+* -- 81
+:= -- 175
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 27
+empty$ -- 64
+format.name$ -- 22
+if$ -- 184
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 17
+stack$ -- 0
+substring$ -- 41
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 1
+while$ -- 8
+width$ -- 4
+write$ -- 30
+(There was 1 error message)

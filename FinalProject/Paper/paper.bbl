@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+
+\bibitem{comparisonofempirical}
+V.~Abhayawardhana, I.~Wassell, D.~Crosby, M.~Sellars, and M.~Brown.
+\newblock Comparison of empirical propagation path loss models for fixed
+  wireless access systems.
+\newblock {\em 2005 IEEE 61st Vehicular Technology Conference}, June 2005.
+
+\bibitem{asimulation}
+S.~Aguilar and H.~Merino.
+\newblock A simulation of an iot-based solution using lorawan for remote
+  stations of peruvian navy.
+\newblock {\em 2019 IEEE Latin-American Conference on Communications}, November
+  2019.
+
+\bibitem{cloudrf}
+{Alex Farrant}.
+\newblock {Cloud-RF is a user friendly service for modeling radio propagation}.
+\newblock \url{https://www.qsl.net/kd2bd/splat.html}.
+
+\bibitem{educationalsimulation}
+A.~Bjelopera, M.~Kajinic, and E.~Dumic.
+\newblock Educational simulation tools for radio wave propagation models.
+\newblock {\em International Journal of Education and Information Technolgies},
+  November 2019.
+
+\bibitem{Breen+:wintech20}
+Joe Breen, Andrew Buffmire, Jonathon Duerig, Kevin Dutt, Eric Eide, Mike
+  Hibler, David Johnson, Sneha~Kumar Kasera, Earl Lewis, Dustin Maas, Alex
+  Orange, Neal Patwari, Daniel Reading, Robert Ricci, David Schurig, Leigh~B.
+  Stoller, Jacobus Van~der Merwe, Kirk Webb, and Gary Wong.
+\newblock {POWDER}: Platform for open wireless data-driven experimental
+  research.
+\newblock In {\em Proceedings of the 14th International Workshop on Wireless
+  Network Testbeds, Experimental Evaluation and Characterization (WiNTECH)},
+  September 2020.
+
+\bibitem{dttperformance}
+M.~Denkovska, P.~Latkoski, and L.~Gavrilovska.
+\newblock Dtt performance degradation in presence of coexisting lte network
+  interference.
+\newblock {\em 2014 4th International Conference on Wireless Communication,
+  Vehicular Technology, Information Theory and Aerospace \& Electronic
+  Systems}, October 2014.
+
+\bibitem{heuristicalgorithm}
+K.~Gronchla and K.~Polys.
+\newblock Heuristic algorithm for gateway location selection in large scale
+  lora networks.
+\newblock {\em 2020 International Wireless Communications and Mobile
+  Computing}, June 2020.
+
+\bibitem{jeremyclark}
+{Jeremy Clark}.
+\newblock {Telecommunications Navigation and Electronics}.
+\newblock
+  \url{https://jeremyclark.ca/wp/telecom/splat-rf-signal-propagation-loss}.
+
+\bibitem{splat}
+{John Magliacane}.
+\newblock {SPLAT! is an RF Signal Propagation, Loss, And Terrain analysis tool
+  for electromagnetic spectrum between 20 MHz and 20 GHz}.
+\newblock \url{https://www.qsl.net/kd2bd/splat.html}.
+
+\bibitem{comparisonof}
+S.~Kasampalis, P.~Lazaridis, Z.~Zaharis, A.~Bizopoulos, S.~Zettas, and
+  J.~Cosmas.
+\newblock Comparison of longley-rice, itm and itwom propagation models for dtv
+  and fm broadcasting.
+\newblock {\em 2013 16th International Symposium on Wireless Personal
+  Multimedia Communications}, June 2017.
+
+\bibitem{shout}
+{Kirk Webb}.
+\newblock {Shout Measurements Framework}.
+\newblock \url{https://gitlab.flux.utah.edu/powderrenewpublic/shout.git}.
+
+\bibitem{pathlossmodels}
+{Neal Patwari}.
+\newblock {Introduction to the Physical Layer}.
+\newblock
+  \url{https://gitlab.flux.utah.edu/reu/reu2020/-/blob/master/training_material/patwari_notes.pdf}.
+
+\bibitem{directionalradio}
+A.~Sulyman, A.~Alwarafy, G.~MacCartney, T.~Rappaport, and A.~Alsanie.
+\newblock Directional radio propagation path loss models for millimeter-wave
+  wireless networks in the 28-, 60-, and 73-ghz bands.
+\newblock {\em IEEE Transactions on Wireless Communication}, July 2016.
+
+\bibitem{pathloss}
+S.~Sun, T.~Thomas, T.~Rappaport, H.~Nguyen, I.~Kovacs, and I.~Rodriquez.
+\newblock Path loss, shadow fading and line-of-sight probability models for 5g
+  urban macro-cellular scenarios.
+\newblock {\em 2012 IEEE Globecom Workshops}, December 2015.
+
+\bibitem{hybridRF}
+S.~Watza, R.~Rajasekaran, and E.~Frew.
+\newblock Hybrid rf propagation model using itm and gaussian process for
+  communication-aware planning.
+\newblock {\em RSS 2017 Robot Communication in the Wild: Meeting the challenges
+  of Real-world Systems}, July 2017.
+
+\bibitem{modelingand}
+C.~Zhou and R.~Jacksha.
+\newblock Modeling and measurement of radio propagation in tunnel environments.
+\newblock {\em IEEE Antennas and Wireless Propagation Letters}, May 2016.
+
+\end{thebibliography}

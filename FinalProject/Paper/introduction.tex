@@ -1,0 +1,37 @@
+% -*- mode: LaTeX -*-
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\label{sec:introduction}
+
+With the creation and deployment of the Platform for Open Wireless Data-driven Experimental Research (POWDER)~\cite{Breen+:wintech20}
+that started in early 2018 at the University of Utah, users have been able to work on wireless networking technologies to funnel their creative 
+nature into innovative networking research experiments. One such experiment is Shout~\cite{shout}. Shout is a measurement framework 
+developed by the POWDER team, that allows for radio frequency measurements to be conducted on the POWDER testbed. A measurement 
+of particular interest involves the radio frequency propagation loss for each usable node on the platform. POWDER offers a wide range of 
+wireless endpoints (i.e. rooftop nodes, static nodes at human height, nodes on campus shuttles and portable nodes) that can be used to 
+measure radio frequency propagation. 
+
+The goal of the work described in this paper is to use the POWDER platform to perform radio frequency measurements under different conditions and to compare
+the results against radio frequency propagation tools. SPLAT!~\cite{splat} is a radio frequency signal propagation, loss, and terrain analysis
+tool for the electromagnetic spectrum between 20 MHz and 20 GHz. For our purposes SPLAT! will serve as our modeling tool to predict
+radio frequency propagation assuming the same scenarios. 
+
+In this paper, we perform radio frequency propagation validation for the Shout framework using the modeling tool SPLAT! on the POWDER
+platform. For the purposes of this paper we will be using Band 7 ($\sim$2600 MHz), Band 42 ($\sim$3500 MHz), and Band 43 ($\sim$3700 
+MHz). We will be using the cbrssdr1 and cellsdr1 nodes as well as fixed endpoint nucs for our measurement collection. 
+
+We perform three main activities. First, using Shout we will collect experimental data on the frequencies and nodes described above. 
+Secondly, using SPLAT! we will predict radio frequency propagation assuming the same scenarios. Lastly, we will compare and analyze
+any differences between the ``ground truth" measurements from Shout and the predictions obtained from SPLAT!. 
+
+The contributions of this work are the following. We collect radio frequency propagation loss measurements on multiple bands for use 
+in the POWDER platform. We create a SPLAT! research experiment profile that can be used for future radio frequency modeling within the 
+POWDER platform. This includes the proper configuration files for every current node that is usable on the testbed. Lastly, we present our
+results between the ``ground truth" and our simulated data.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% End of file.

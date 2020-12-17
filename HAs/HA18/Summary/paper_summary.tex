@@ -1,0 +1,119 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 18.a\\}
+\author{Jose Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{Detecting if LTE is the Bottleneck with BurstTracker}
+
+Paper discussed in this summary is ``Detecting if LTE is the Bottleneck with BurstTracker"~\cite{detectinglte}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:} 
+This paper is a description of a research prototype. The research prototype being discussed is BurstTracker. 
+
+\item {\it Context:} 
+The technical area of this paper relates to mobile networking, specifically 4G LTE. Our previous paper 
+on the security flaws of LTE~\cite{breakinglte} relate in that they both discuss LTE. However, the 5G 
+paper~\cite{5gwhite} can also relate as it discusses similar concepts between 4G and 5G. 
+
+\item {\it Assumptions:} 
+Within the first path the authors do not make any bold assumptions. But rather focus on the usability of 
+BurstTracker on video streaming performance.
+
+\item {\it Contributions:} 
+They list their contributions are as follow. First, they observe that the scheduling patterns of LTE base 
+stations reveal the status of each user's downlink queue. Secondly, they describe an algorithm 
+for determining when the LTE link is the bottleneck and they use it to implement a client-side LTE 
+bottleneck estimator called BurstTracker. Furthermore, they demonstrate that BurstTracker can 
+estimate time periods that the LTE downlink is the bottleneck. Thirdly, using BurstTracker they 
+discover that many Tier-1 providers in the US appear to operate middleboxes that perform slow
+start restart on HTTP and HTTPS flows. Lastly, they observed that SSR causes video streaming
+applications to underutilize the LTE downlink due to a negative feedback loop in bitrate selection. 
+
+\item {\it Clarity:} 
+From what I have read this paper appears to be written well. 
+
+\end{enumerate}
+\subsection{Second pass information}
+\label{sec:second}
+\begin{itemize}
+
+\item {\it Summary:} 
+The authors of this paper present BurstTracker. BurstTracker can be used to detect if the LTE downlink
+is the bottleneck for developer applications. BurstTracker identifies bursts within a prolonged transfer 
+on the LTE downlink. Bursts are contiguous periods of transfer during which the user's queue at the base
+station is nonempty. When the application has a burst the downlink is being bottled. BurstTracker enabled
+the authors to find that three Tier-1 US providers appear to be operating transparent split-TCP middleboxes
+that impact the performance of video streaming. Furthermore, they discover a simple workaround to 
+disable this problem and observe a video-streaming bitrate improvement by up to 35 percent. The authors
+tribute their motivation from a surprising observation they made while streaming video on a smartphone 
+connected to an LTE base station. This lead them to follow up on their ideas and create BurstTracker. 
+In the Background section we learn of throughput time, bursts, and categorizes a downlink bottleneck.
+They then describe the challenges poised for creating BurstTracker, and follow up with how they solved
+these challenges. Next, they provide an evaluation of BurstTracker, and embark on a case study relating 
+to video streaming. Lastly, they go into details behind the video streaming and how Slow Start Restart 
+is the cause of the slowness not the LTE downlink. They further state that SSR is being added by a TCP
+middlebox. To fix this problem they send data from an unreserved port but further improve the idea by having
+the video client perform frequent micro-fetches to keep the application from going idle.
+
+\end{itemize}
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+The paper has a good introduction. It's short but it clearly illustrates the problem, what they have done, and 
+what they hope to show the reader of the paper. Furthermore, I also believe the background section was a plus
+ because they clarify a few of the questions I had from reading the introduction. Another strength was that they 
+ provided their code for use and provided two ways of using their code: online and offline. 
+ 
+\item {\it Weaknesses:} 
+I thought the way they handled their adverse conditions for the smartphone was a bit weird. They even go on to 
+say that they covered the phone with a metal container. I feel that their are better ways to provide adverse 
+conditions for testing. I also felt that their evaluation section was really short and lacked content to prove the 
+validity of BurstTracker. They kinda just quit talking about BurstTracker and focus on the video streaming after
+the first half.
+
+\item {\it Questions:} 
+They mention that they were able to infer the contention and underflow milliseconds using only the users
+own resource allocation in a base station that gave the millisecond to one user. I wonder if there inference 
+would still work for a base station that shares the millisecond. 
+
+\item {\it Interesting citations:}
+I was actually really curious about the video stream behind mobile networks that is why I choose to look into
+piStream~\cite{pistream}. piStream is a physical layer informed adaptive video streaming that happens over LTE.
+
+\item {\it Possible improvements:} 
+I felt that their use case on SSR overtook the paper from BurstTracker. The user cases provided good 
+evidence of the use and necessity of BurstTracker but in my opinion it soon became the center Idea 
+for a paper that was originally on BurstTracker and its evaluation. 
+
+\item {\it Future work:} 
+I'm sure you can create similar scripts to infer other statistics about resource blocks. They also mention how 
+this can be used for 5G. Furthermore, you can use BurstTracker to investigate and explain other parts
+of networking that aren't normally open to everyday users like video streaming. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+

@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper_summary.aux
+The style file: acm.bst
+Database file #1: biblio.bib
+I was expecting a `,' or a `}'---line 348 of file biblio.bib
+ :  
+ :  issue_date = {February 2018},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 358 of file biblio.bib
+ :  
+ :  %author = {Pope, M. and Soveri, M.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in 5gwhite
+Warning--empty journal in 3gppeutra
+You've used 2 entries,
+            2253 wiz_defined-function locations,
+            536 strings with 4019 characters,
+and the built_in function-call counts, 398 in all, are:
+= -- 36
+> -- 14
+< -- 0
++ -- 6
+- -- 4
+* -- 20
+:= -- 79
+add.period$ -- 5
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 17
+empty$ -- 31
+format.name$ -- 4
+if$ -- 75
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 12
+num.names$ -- 4
+pop$ -- 8
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 10
+stack$ -- 0
+substring$ -- 10
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 2
+while$ -- 4
+width$ -- 3
+write$ -- 18
+(There were 2 error messages)

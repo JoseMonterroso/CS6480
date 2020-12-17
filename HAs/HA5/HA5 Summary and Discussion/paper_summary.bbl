@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{nfv}
+{\sc Han, B., Gopalakrishnan, V., Ji, L., and Lee, S.}
+\newblock Network function virtualization: Challenges and opportunities for
+  innovations.
+\newblock {\em IEEE Communications Magazine\/} (Feb. 2015), 90--97.
+
+\bibitem{nfvsdn}
+{\sc Institute, E.}
+\newblock Network function virtualisation.
+\newblock {\em SDN and OpenFlow World Congress\/} (2012).
+
+\bibitem{containerization}
+{\sc Pahl, C.}
+\newblock Containerization and the paas cloud.
+\newblock {\em IEEE Cloud Computing 2\/} (July 2015), 24--31.
+
+\bibitem{opennetvm}
+{\sc Zhang, W., Liu, G., Zhang, W., Shah, N., Lopreiato, P., Todeshi, G.,
+  Ramakrishnan, K., and Wood, T.}
+\newblock Opennetvm: A platform for high performance network service chains.
+\newblock {\em HotMiddlebox '16: Proceedings of the 2016 workshop on Hot topics
+  in Middleboxes and Network Function Virtualization\/} (Aug. 2016), 26--31.
+
+\end{thebibliography}

@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{5gwhite}
+{\sc group companies, N.}
+\newblock Making 5g a reality.
+\newblock {\em NEC White Paper\/} (Feb. 2018).
+
+\bibitem{breakinglte}
+{\sc Rupperecht, D., Kohls, K., Holz, T., and Popper, C.}
+\newblock Breaking lte on layer two.
+\newblock {\em 2019 IEEE Symposium on Security and Privacy (SP)\/} (May 2019).
+
+\bibitem{spoofing}
+{\sc Tippenhaur, N., Popper, C., Rasmussen, K., and Capkun, S.}
+\newblock On the requirments for successful gps spoofing attacks.
+\newblock {\em CCS '11: Proceedings of the 18th ACM conference on Computer and
+  communications security\/} (Oct. 2011).
+
+\bibitem{plainsight}
+{\sc Yang, H., Sangwook, B., Son, M., Kim, H., Kim, S., and Kim, Y.}
+\newblock Hiding in plain signal: Physical signal overshadowing attack on lte.
+\newblock {\em SEC '19: Proceedings of the 28th USENIX Conference on Security
+  Symposium\/} (Aug. 2019).
+
+\end{thebibliography}

@@ -1,0 +1,142 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 14.a\\}
+\author{José Monterroso }
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{XIA: Architecting a more trustworthy and evolvable internet}
+
+Paper discussed in this summary is ``XIA: Architecting a more trustworthy and evolvable internet''~\cite{xia}.
+
+\subsection{First pass information}
+\label{sec:first}
+\begin{enumerate}
+
+\item {\it Category:}
+
+This paper is a description of a research prototype. The research prototype in this paper is the eXpressive 
+Interent Architecture (XIA). 
+
+\item {\it Context:} 
+
+The technical area of this paper relates to internet architectures, in fact they cover similar topics to that of the 
+DARPAnet ~\cite{darpa} paper we read a few weeks back. This paper also relates to our paper on tussle ~\cite{tussle}
+because the authors of XIA bring up similar ideas when they discuss the goals of XIA. On a smaller note this 
+paper discusses the narrow waist, which we first learned in our NDN~\cite{ndn} paper.
+
+\item {\it Assumptions:} 
+
+They make the assumption that with our current internet, it is difficult to provide a clean path for incremental 
+deployment. I think this assumption is true, because of the examples they give with regards to IPv6 and 
+internet security which makes me believe this is a true problem in our current internet.
+
+\item {\it Contributions:} 
+
+They don't have any stated contributions but rather have goals with XIA for the network layer. Their goals are 
+they want to be trustworthy, support long-term evolution of usage models. support long-term technology
+evolution, and support explicit interfaces between network actors. 
+
+\item {\it Clarity:}
+
+From what I have read of this paper so far, it appears to be written well. 
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+\begin{itemize}
+\item {\it Summary:} 
+
+The eXpressive Internet Architecture (XIA) is an internet architecture with native support for multiple principals
+and the ability to accommodate new principles over time. XIA keeps several current internet features but seeks
+to modify and extend the network layer. The three main design principles of XIA are: communication between 
+diverse entities, communication operations should have intrinsic security, and lastly the architecture must 
+support flexible addressing. The XIA architecture has four basic XIA identifier types, each with their own 
+intrinsic security properties. The four are: Host XIDs, Service XIDs, Content XIDs, and Network XIDs. For 
+flexible addressing, XIA uses a Directed Acyclic Graph of XIDs as addresses. Although XIA has not been 
+fully fleshed out in code, there have been promising attempts of using the ideas of XIA to make things
+better. For example, the use of Click on Linux gave them promising results for pushing the limits of 
+extremely large scale flat host, service, or content forwarding tables. XIA can be incrementally added to
+our current IPv4 network through the use of IPv4 tunneling. The authors also designed FCP a novel
+congestion control framework. The SCION architecture features scalability, control, and isolation for secure
+and highly available host-to-host communication. Lastly, XIA offers economic incentives for caching and 
+privacy through the use of XIDs. 
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+
+What made me understand XIA the most was when they listed their goals in the introduction. This helps the 
+reader get a good understanding of what the authors are hoping to do. They have prototypes on GitHub which is 
+always a great thing. And lastly their figures helped me visualize their ideas, especially the parts that related to the 
+DAG. 
+
+\item {\it Weaknesses:}
+
+I felt that there abstract was a bit weak, after I read it I had no idea what the paper was going to be about. Furthermore,
+a lot of XIA's ideas are high level. I understood the idea but failed to see how it would work or be better than what we
+currently have. I'm also confused with all the various aspects that tie into XIA. It appears that they made all these 
+different frameworks and technologies, and now they want to combine them all and call them XIA together. Lastly, I 
+would have liked to have seen some data to back up their claims, especially their FCP claims. 
+
+\item {\it Questions:}
+
+Throughout the paper they list a bunch of technologies that they have developed that can be used in XIA.
+But they mention that XIA hasn't been fully fleshed out, so I question if they will be able to fully integrate 
+all these aspects together in the end. 
+
+\item {\it Interesting citations:} 
+
+They make a huge case for Serval~\cite{serval}, and how they were able to port a linux implementation 
+of Serval to XIA and leveraged XIA's features to improve Serval. So I would like to give Serval a read. 
+
+\item {\it Possible improvements:} 
+
+What would have made this paper better would have been some use cases of XIA as a whole 
+rather than the various parts of XIA that can be used. I was missing the big picture of XIA. 
+
+\item {\it Future work:} 
+
+Potential future work could be XIA for mobile networks. Their paper also lacked data to back up most of their claims
+so I think a measurement paper would be in order to gauge XIA and its capabilities. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 12.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{Title of paper: A Brief Introduction to Named Data Networking}
+
+Paper discussed in this summary is ``A Brief Introduction to Named Data Networking''~\cite{ndn}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:} 
+
+This paper is a description of a research prototype. The prototype being discussed is Named Data Networking (NDN). 
+
+\item {\it Context:} 
+
+The technical area that relates to this paper is network architecture. In fact some aspects of the DARPAnet~\cite{darpa},
+are recited within this paper. Idealy NDN would fix some of the problems associated with IP.
+
+\item {\it Assumptions:}  
+
+A small assumption is that the network needs to evolve along side the applications that are being developed so that 
+the network can meet their demands. I believe that this is a valid assumption because we need to be able to support 
+new technologies, however, we shouldn't update the network for specific use cases in technologies. 
+
+\item {\it Contributions:} 
+
+The authors contribute by providing a paper that offers the readers an overall picture of NDN's basic principles, concepts,
+operations, and properties. 
+
+\item {\it Clarity:} 
+
+From what I have read, this paper appears to be well written.
+
+\end{enumerate}
+\subsection{Second pass information}
+\label{sec:second}
+\begin{itemize}
+\item {\it Summary:} 
+
+In this paper we learned a bit of the overall picture of Named Data Networking (NDN). NDN is designed to network 
+the world of computing devices, ranging from IoT sensors to cloud servers, by naming bits rather than location. We 
+can say that NDN is similar to HTTP's semantics of request and response. For NDN we use interest packets which
+contains the name of the requested data, the NDA network then responds with data packets neither of which contains an
+address nor information about the requestor. In NDN, consumers fetch data instead of senders pushing packets to 
+destinations. Furthermore, NDN uses a stateful forwarding plane. Section four, touches on the idea of how NDN's
+forwarding engine works. Next in section 5 we learn about NDN's communication security. We then learn of NDN's
+need for dataset synchronization and how Sync is used to achieve this. Lastly, in section 7 we touch on the idea
+of what makes NDA great for the battlefield, and how it shares various similarities and improvements from the 
+TCP/IP architecture. 
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+
+I believe this paper does a great job of covering the main points of NDN, as well as providing multiple further 
+resources if we choose to dive in a little deeper into the concepts of NDN. I also enjoyed this paper's figures
+because they enhanced the written text. Lastly, the abstract does a great job of really putting the papers work
+into one solid paragraph.
+
+\item {\it Weaknesses:} 
+
+I feel like this paper contained more weaknesses than strengths. It's not to say that this paper was bad I just
+simply think that It could have been improved. The main issues that I found relates to the format and structure
+of the paper. There were a lot of places where I think moving a section before another section would have been
+better. I also don't like how they relay on preexisting technologies to explain NDN concepts. And lastly, I wish
+they would have provided more examples and use cases to give me more reasons why NDN is needed/better. 
+
+\item {\it Questions:} 
+
+I actually have a ton of questions regarding security in NDN. I don't quite understand why NDN would be 
+more secure than IP. I especially don't understand when they say that NDN has natively built in security. 
+
+\item {\it Interesting citations:} 
+
+In the questions section above I listed my confusion with NDN security. It was also mentioned in the paper
+that NDN proves to be most resilient against DoS attacks. They didn't mention why so I'm hoping that 
+this paper on DoS and NDN~\cite{ndndos} will help answer some of these questions. 
+
+\item {\it Possible improvements:} 
+
+I believe that if they added more examples and use cases it would have made their paper stronger.  I also 
+strongly believe that If they used more subsections and better name schemes their paper would be easier
+to read and follow.
+
+\item {\it Future work:} 
+
+I would like to do a measurement study on round trip time for NDN's datagram delivery. I would also like 
+to look more into NDN's self-learning function. Not much was said about the self-learning function that I 
+wonder if it uses AI or machine learning to work. Another Idea could be a case study on how ineffective 
+DoS attacks are against NDN compared to IP. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

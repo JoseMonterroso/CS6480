@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{detectinglte}
+{\sc Balasingam, A., Bansal, M., Misra, R., Nagaraj, K., Tandra, R., Katti, S.,
+  and Schulman, A.}
+\newblock Detecting if lte is the bottleneck with bursttracker.
+\newblock {\em MobiCom '19: The 25th Annual International Conference on Mobile
+  Computing and Networking\/} (Aug. 2019).
+
+\bibitem{5gwhite}
+{\sc group companies, N.}
+\newblock Making 5g a reality.
+\newblock {\em NEC White Paper\/} (Feb. 2018).
+
+\bibitem{breakinglte}
+{\sc Rupperecht, D., Kohls, K., Holz, T., and Popper, C.}
+\newblock Breaking lte on layer two.
+\newblock {\em 2019 IEEE Symposium on Security and Privacy (SP)\/} (May 2019).
+
+\bibitem{pistream}
+{\sc Xie, X., Zhang, X., Kumar, S., and Li, L.}
+\newblock pistream: Physical layer informed adaptive video steaming over lte.
+\newblock {\em MobiCom '15: Proceedings of the 21st Annual International
+  Conference on Mobile Computing and Networking\/} (Sept. 2015).
+
+\end{thebibliography}

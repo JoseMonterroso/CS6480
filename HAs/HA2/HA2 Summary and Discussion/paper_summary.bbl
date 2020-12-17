@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{aview}
+{\sc Armbrust, M., Fox, A., Griffith, R., Joseph, A., Katz, R., Konwinski, A.,
+  Lee, G., Patterson, D., Rakin, A., Stoica, I., and Zaharia, M.}
+\newblock A view of cloud computing.
+\newblock {\em Communications of the ACM 53}, 4 (Apr. 2010), 50--58.
+
+\bibitem{containerization}
+{\sc Pahl, C.}
+\newblock Containerization and the paas cloud.
+\newblock {\em IEEE Cloud Computing 2\/} (July 2015), 24--31.
+
+\bibitem{docker}
+{\sc {Turnbull, J.}}
+\newblock {The Docker Book}.
+\newblock \url{https://dockerbook.com/}.
+
+\end{thebibliography}

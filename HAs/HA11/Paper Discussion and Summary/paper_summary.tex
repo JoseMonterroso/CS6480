@@ -1,0 +1,147 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 11.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{Understanding Operational 5G: A First Measurement Study on Its Coverage, Performance, and Energy Consumption}
+
+Paper discussed in this summary is ``Understanding Operational 5G: A First Measurement Study on Its Coverage, Performance, and Energy Consumption''~\cite{measurementstudy}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:} 
+This paper is a measurement paper on operational 5G. The authors of this paper measure 5G coverage, 
+performance, and energy consumption. 
+
+\item {\it Context:} 
+The technical area of this paper deals with 5G networking. Specifically it deals with the coverage, performance,
+and energy consumption of 5G devices. This is the first measurement paper we have read in this class. However,
+It does greatly relate to our previously read paper on the 5G infrastructure ~\cite{5gwhite}.
+
+\item {\it Assumptions:}  
+The Authors of this paper built a reliable toolset for the various measurements they do with coverage, performance,
+and energy consumption. They assume that their technology is reliable and produces accurate data. I'm honestly 
+not quite sure how much I can trust their stuff, however, this paper was published in ACM which makes me believe
+that they are reliable and that their assumptions are valid. 
+
+\item {\it Contributions:} 
+The paper's stated claims are as follows. First they quantify characteristics of 5G's coverage in comparison to 4G.
+Second they identify an alarming TCP anomaly that severely underutilizes 5G capacity. Third they do a breakdown
+analysis of the 5G end-to-end latency which pinpoints the bottleneck. Fourth they implement and profile a 5G 
+immersive media application to explore the feasibility and underlying challenges. Fifth they provide a detailed 
+account of the power budget on 5G smartphones. And finally sixth they have released their dataset and measurement
+tools to the public. 
+
+\item {\it Clarity:} 
+From what I have read this paper does appear to be written well. 
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+This paper is discussing the measurements found from studying 5G coverage, performance, and energy consumption.
+After the abstract and the paper's introduction, they then next discuss the measurement methodology behind their
+paper. They describe how most of their experiments focused on a campus where 6 5G base stations are deployed
+and the campus is surrounded by tall buildings, trees and heavy human activity. Furthermore, the campus has a 
+NSA deployment of 5G. The authors use ZTE Axon10 pro, HUAWEI Mate20 X, and a HUAWEI Mate30 pro as UEs.
+Within this section they then go in-depth of the measurement tools they used and created for this paper. In section 3 
+the authors give us the lay of the land, by discussing the RSRP of the 4G and 5G networks around campus. As well 
+as provide us with cell coverage information around their campus indoors and outdoors. We then touch on handover
+and its latency. Next in section 4 we discuss transport layer throughput, TCP throughput during handoff and end-to-end
+latency. In section 5 we touch on 5G application performance, examining the application QoE under 5G. Lastly, the 
+authors run a microscopic analysis of the power management under the 5G NSA.
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+From the beginning we get a clear understanding of what this paper is about, and what direction this paper will take,
+we even get the results in the beginning. That is why I think that the abstract and introduction are a big plus in this paper.
+Furthermore, this paper used a lot of technology (UEs) to do their measurements. In all cases we got a clear description of
+the technology used as far as names and some specifications. Lastly, I really thought the format of the sections and subsections
+gave the paper a professional look and feel.
+
+\item {\it Weaknesses:} 
+The authors only used what appear to be Huawei technology (phones, cloud server). I believe if they expand their 
+devices they could have acquired non-bias Huawei data. I really enjoyed their tables and figures but the placement 
+was really poor. All the tables and charts look squished and pressed for space. Lastly, a bit of a nitpick but they only
+got data from 5G NSA, I know it's hard to find standalone 5G but that would greatly add to their paper. 
+
+\item {\it Questions:} 
+They used a lot of acronyms (PCI, RSRP, RSPO, SINR, COL, MCS) that I am not at all familiar with, so I will be doing
+some research. I also have a few small questions on how handover works. Lastly, I didn't realize how expensive 5G gNBs
+are. 
+
+\item {\it Interesting citations:} 
+It is because of my final project that is on radio propagation, that I found this paper on 5G performance
+~\cite{5gnetworkper} to be an interesting read. 
+
+\item {\it Possible improvements:} 
+I believe that if they addressed the issue with the graphs being crunched together and changed their layout a bit
+their paper would improve. Also they could have used other technology along with Huawei to improve their results. 
+
+\item {\it Future work:} 
+I think what they did could be expanded to the standalone 5G (5G core). This paper also covers a lot of little things, 
+maybe we could choose one and dive a little deeper on it. We could even use their new technology that they developed
+to measure other 5G bands. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

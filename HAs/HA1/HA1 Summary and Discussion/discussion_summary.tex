@@ -1,0 +1,82 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Class discussion summary\\
+HA 1.b\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section*{Discussion summary}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+During the discussion in class we first defined what cloud computing is. Now something that I missed was that 
+the authors of the paper define cloud computing as applications delivered as services over the internet while the 
+hardware and systems software is located at the data centers. But they then discuss how enterprise data centers using 
+virtualization is not a cloud. So we see the authors contradict themselves a bit. In the discuss we then moved on to
+the classes of utility computing. What I missed in the reading was noticing the difference of the model of computations used
+for Amazon EC2, Azure, and AppEngine. I failed to realize the different layers of abstraction used in each cloud. For example,
+EC2 is a lower level of abstraction meaning we have more control over what we would like to do in our EC2 instance. However,
+AppEngine is higher level meaning that Google handles most of the backend and we need to learn how to use their APIs. 
+We then moved on to discuss the 10 obstacles and opportunities of growth. I believe the most technically challenging obstacle
+is scalable storage. Even the authors of the paper mention that we still need to create scalable storage.  
+
+\item {\it Strengths and weaknesses:} 
+I believe the consensus of the class was that this is a good paper. The paper aims to teach readers about cloud
+computing and I think it does that without overwhelming the reader. I mentioned this before in the summary, but the 
+definition of cloud computing didn't include the idea of scalability. So when they mention an enterprise database not being
+a cloud, their definition seems to falter. Another weakness was the constant use of the word virtualization in a broad way.
+I felt that the authors defaulted to the word "virtualization" when they discussed how the cloud runs services. Finally,
+a strength of the paper was the discussion of scalability and elasticity. In my opinion this is the number one reason why I 
+would use cloud computing. 
+
+\item {\it Connection with other work:}
+Because this is the first paper we discussed in class no other papers were referenced during the discussion. However, 
+some connection to cloud computing that I have used revolves around Stadia, and Amazon EC2. I read previous papers
+and documentation on Amazon EC2 for my web development class, were I first learned about elasticity. Secondly, stadia
+is Google's cloud gaming platform.  
+
+\item {\it Future work:} 
+It was mentioned in the discussion to incorporation some kind of ML or AI to appropriately trigger cloud computing elasticity.
+Another idea could be the study of the models of computation used by different cloud providers and how/if they attempt to data lock you. 
+
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

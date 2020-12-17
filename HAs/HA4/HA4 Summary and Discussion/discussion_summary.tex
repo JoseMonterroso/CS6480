@@ -1,0 +1,176 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Class discussion summary\\
+HA 4.b\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section*{Discussion summary}
+\begin{itemize}
+
+\item {\it Summary:} 
+We first discussed how this paper was an IEEE communication magazine article. What I failed to 
+understand was that this paper would cover things at a higher level, and not include many citations. 
+We then discussed how NFV implements network functions through software virtualization techniques
+and runs them on commodity hardware. This is great because if you are a service provider you are 
+not locked in, and have flexibility to get the best pieces together. We then slightly touched
+on 3GPP, and IETF, and how they create and propose standards for engineering. We then went into to some details about 
+performance and how software is competing with non-native hardware, and how with virtualization
+you have other tenets and big overheads. When it comes to manageability we need to worry about 
+service chaining. We also brought up the point that general purpose hardware does not have the same
+reliability as a dedicated piece of hardware, therefore, we need to make the software more reliable. Lastly,
+we discussed how orchestration, and shared resources for VNFs brings up security concerns. 
+
+
+\item {\it Strengths and weaknesses:} 
+The consensus for this paper was a bit split. We discussed how the paper did a great job of explaining NFV. We 
+also noted that the abstract and introduction were really good sections that layout the contents of
+the paper fairly well.  Lastly, we considered the Use Cases section to be 
+good because it provided real world examples of NFV. On the topic of sections, the Related Works
+section was poorly made and resembled more of a Background section. Another weakness that 
+was brought up was that there really wasn't any good analysis of NFV. Finally, we discussed that 
+the authors of the paper drop a lot of big concepts/words and didn't go much in depth. We felt this 
+was a weakness because we didn't know what the word meant and why it's important with regards 
+to NFV.
+
+\item {\it Connection with other work:} 
+This paper didn't really connect with any other papers we have discussed. One slight connection
+that I can see is the use of virtualization in NFV, which is done in cloud computing and for microservices. 
+Another small connection is how NFV needs orchestration tools just like how Docker needs orchestration
+for larger complex multi-container systems. 
+
+\item {\it Future work:} 
+Future work that was brought up dealt with looking into the Linux New API (NAPI) and Intel's Data Plane 
+Development Kit (DPDK) for clustered VNF instances. I also wasn't really aware of how important service
+chaining is, so I believe this would be a good area to look into.
+
+\end{itemize}
+\end{document}
+
+
+\begin{comment}
+*IEEE communication magazine ** DIDN'T know this would mean the type of paper that this paper was (covered many things no detail)
+	=> higher level, shorter, not that many citations 
+	=> thank the editors guess editors 
+	
+*They bring up a lot of things but don't go into detail about it 
+
+*NFV decouples software implementation of network function from the underlying hardware  	
+	=> You can have multiple functions running on a piece of hardware
+	
+*NFV implements network functions through software virtualization technique and runs them on commodity hardware
+
+*If you are a service provider you are locked in when you buy from jupiter and ciscoo
+	=> but with NFV you are not limited to be locked in with software
+	=> you can get the best pieces together
+	
+*The NFV provides flexibility, with software (Time to marked IDEA)
+	=> target and tailored services 
+	
+*They bring up NFV issues
+	=> Network performance
+	=> How to smoothly migrate from the existing network infrastructure to NFV based solution 
+	
+	
+*Related Works, not good
+
+*3GPP => standard bodies for cellular mobile technologies
+*IETF => Create and propose standards for engineering  (RFC => request for comments)
+	=> less formal process but in practice they are standards 
+
+*Technical Requirements
+	=> Performance: corresponding physical version hardware is faster/better 
+		=> with NFV we need virtualization 
+			=> software competing with hardware, 
+			=> virtualize: other tenets and OVERHEADS
+		=> Clusters need to share everything so we need to distribute out load (distribute complexity)
+	=> Manageability: 
+		=> service chaining: somethings need to be in a specific place 
+			=> have to go through things in the right order 
+	=> Reliability and stability 
+		=> general purpose hardware does have the same reliability as a dedicated piece of hardware 
+		=> 5 nines of reliability
+	=> Security: 
+		=> orchestration and hypervisiours 
+		=> all the new software we have to trust
+	
+**Read Linux New API and intel's data plane development kit 
+
+Compose several VNFs together to reduce management complexity vs decompose a VNF into smaller functional blocks for
+reusability and faster response time 
+
+
+The two major enablers of NFV are indsutry-standared servers and technologies developed for cloud computing
+
+SDN and NFV are mutually beneficial to each-other, enhance its performance, facilitate its operation and simply the
+compatibility with legacy deployments 
+
+A shift towards a service based network 
+
+The complex stuff happens at the clouds
+	=> makes the claim that the things in the home can be much simpler 
+	=> more radical 
+	=> do not go into detail what is the layer 2 device they talk about
+	
+	
+NFV has more flexibility for migrations 
+
+State needs to be migrated not just the software 
+
+End to end principle: of the initial internet architecture that does not modify packets on the fly is no longer valid in current network
+	=> complexity at the endpoints 
+	=> in the network nothing changes 
+	
+	
+*Pros:
+ 	=> Abstract and intro 
+	=> Uses cases 
+	=> Explained NFV pretty well
+
+*Cons:
+	=> Name drop and walk away 
+	=> no good analysis 
+	=> no proof of concept of the paper 
+	=> Related works 
+
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

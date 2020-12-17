@@ -1,0 +1,138 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 2.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+
+\section{Title of paper: Containerization and the PaaS Cloud}
+
+Paper discussed in this summary is "Containerization and the PaaS Cloud''~\cite{containerization}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:} What type of paper is this? 
+
+This paper is an analysis of containerization and how this type of virtualization in cloud computing can advance 
+PaaS clouds. 
+
+\item {\it Context:} In what technical area is the work described in the paper in?
+
+This papers technical area relates to computer networks, specifically cloud computings ability to provide PaaS and IaaS through
+virtualization. 
+This type of work relates to our previous paper, "A view of Cloud Computing"~\cite{aview}, that gave as an overview of cloud
+computing. This paper dives into the virtualization aspect that our previous paper failed to have. 
+
+\item {\it Assumptions:}  What assumptions do the authors make? Do the assumptions appear to be valid?
+
+Truthfully I couldn't find any assumptions made by the author in the introduction nor in the conclusion. From what I have read in 
+the first pass this paper is aimed at showing us the benefits of containers for virtualization in cloud computing. 
+
+\item {\it Contributions:} What are the paper's main contributions?
+
+The author claims to investigate the relevance of the new container technology for PaaS clouds, he then will discuss
+the resulting requirements for application packaging and interoperable orchestration on clusters of containers. Furthermore, the author
+aims to clarify how containers can change the PaaS cloud as a virtualization technique. Lastly, he claims to discuss the achievements
+and limitations of the state of the art technology.
+
+\item {\it Clarity:} Is the paper well written?
+
+Yes, this paper looks to be written well. He follows a nice technical format, and contains colorful figures. 
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+
+In the paper, Mr. Pahl addresses the use of containerization over the current use of VMs. Throughout the paper
+he provides scenarios where containerization such as Docker would be at a greater advantage than VMs. His approach
+revolves around educating the reader about containerization, container-based clusters, and orchestration. The author 
+follows a simple 4 section format. In virtualization and the need for containerization, the author provides a rough history 
+of why virtualization technologies were created. In containerization for lightweight virtualization and application packaging, 
+he discusses the LXC, and how containers are able to function as well as explaining the container-based cluster architecture.
+We then finally get a formal definition of PaaS and how containers can operate in PaaS clouds, in the containerization in 
+PaaS clouds section. Lastly, in the container orchestration and clustering section, we get a full understanding of clusters and how
+frameworks like TOSCA can make it possible to orchestrate complex container-based topologies. 
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+
+\begin{itemize}
+
+\item {\it Strengths:} What are the strengths of the paper? 
+
+I believe this paper does a good job of introducing us to a variety of virtualization technologies. Truthfully I think this paper
+dives deep in the ideas of containerization and orchestration. I like how he provides multiple examples of containerization
+companies and technologies as well as orchestration technologies. But by far the figures are extremely helpful in 
+understanding the concepts. 
+
+\item {\it Weaknesses:} What are the weaknesses of the paper? 
+
+He could have done a better job of formatting his paper, ideally I would have liked to have seen more sections throughout
+the paper. I also noticed that previous statements were also repeated in parts of his paper, it almost felt like a copy paste. 
+One thing that really bothered me was how chose to define PaaS 5 pages into his 8 page paper, especially when he talks 
+about PaaS in the preceding pages. Of the two primary issues he listed (network and data, orchestration) he didn't offer 
+much of a solution. It almost felt as if he was quickly going over them so people wouldn't notice them. Lastly, the conclusion 
+was really short and didn't summarize any of the main talking points. 
+
+\item {\it Questions:} What questions do you have?
+
+It seems as if all PaaS clouds are pushing towards using Docker, is this because Docker was one of the first to do containerization? 
+I'm not at all familiar with OSs and didn't understand a lot of the linux kernel boot up arguments or host/guest architecture comparisons. 
+
+\item {\it Interesting citations:} References that interested you.
+
+Docker~\cite{docker} seems to be growing, so I would like to read more about it. 
+
+\item {\it Possible improvements:} Improvements?
+
+He simply mentions
+"better networking features" when discussing a potential network and data challenge solution. So I think if he addressed that 
+in more depth, as well as the challenges of containerization, his paper would improve. Furthermore, the paper would have been
+better if he provided a proper conclusion to summarize his main points. 
+
+
+\item {\it Future work:} Any new ideas for future work that was inspired by
+your reading of the paper.
+
+He lists three features in table 1 that compares VMs and containers. I can see future work in potentially listing even more 
+features, describing pros and cons of each, and providing metics to prove said statements. I can also see future work in 
+providing advanced network features to help the Kubernetes architecture. Lastly, I can see container orchestration being an
+important field that a lot of people would like to research.   
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+

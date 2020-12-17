@@ -1,0 +1,109 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+\title{CS 6480: Paper reading summary\\
+HA 22.a\\}
+\author{Jose Monterroso}
+\affil{School of Computing, University of Utah}
+\begin{document}
+\maketitle
+\section{On the Needs and Requirements Arising from Connected and Automated Driving}
+
+Paper discussed in this summary is ``On the Needs and Requirements Arising from Connected and Automated Driving''~\cite{ontheneeds}.
+
+\subsection{First pass information}
+\label{sec:first}
+\begin{enumerate}
+
+\item {\it Category:} 
+This paper is an analysis of an existing system as well as a description of a research prototype. The existing system
+that is being analyzed is 5G's ability to support mission-critical Vehicle-to-Everything communications. While the research
+prototype revolves around the main vehicle-to-Everything application categories and their representative use cases selected
+based on the analysis of the future needs of cooperative and automated driving. 
+
+\item {\it Context:} 
+The technical area of this paper relates to mobile networking, specifically 5G~\cite{5gwhite}. And Vehicle-to-Everything (V2X)
+communications. This will be our first V2X paper so not much can relate to this paper.
+
+\item {\it Assumptions:}  
+The authors make a few assumptions relating to the fact that 5G has made V2X a mission-critical goal for their network.
+I think their assumptions is valid as they tell us of how, ADAS, 3GPP, ETSI, ITS, 5GAA, and 5GCAR have all been brought
+together to figure out how and why V2X can be put together within 5G.
+
+\item {\it Contributions:} 
+The paper's main contributions are as follows. First, they identify representative use cases that are based on an 
+analysis of the demands arising from connected and automated driving. Secondly, they study the selected use cases in 
+more detail to identify the corresponding challenging requirements and derive the key performance indicators (KPIs). And 
+lastly, based on the identified use cases and requirements, they discuss the existing V2X technologies and solutions and
+point out valuable future research directions for satisfying the stringent requirements. 
+
+\item {\it Clarity:}
+From what I have read in the first pass this paper appears to be written well.
+
+\end{enumerate}
+\subsection{Second pass information}
+\label{sec:second}
+\begin{itemize}
+
+\item {\it Summary:}
+The authors of this paper provide a description of the main V2X application categories and their representative use
+cases selected based on an analysis of the future needs of cooperative and automated driving. In this paper they 
+summarize and extend the key findings of the 5GCAR project in terms of use cases that form building blocks for 
+connected automated driving. Section 2 discusses the future needs that arise from connected and automated 
+driving and proposes a classification of the related novel V2X applications. Specifically, they discuss the process 
+of gradually allowing for the driver to remain out of the driving loop. This brings us to the sensors need to allow this to
+happen. The sensors fall into two categories, line-of-sight where the car can only see what is around it, and behind the
+corner which uses sensors from other cars and detailed maps to see a 360-degree environment. Section 3 describes 
+five representative use case classes that have been elaborated in 5GCAR and will contribute to making the vision of
+connected and automated driving become a reality. Furthermore, section 3 translates the technical requirements from
+the automated domain into requirements for the telecommunication network. 
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+I thought they they did a great job of backing up their claims on how V2X is an important topic that is growing under
+the current 5G deployment. They did this by bringing up other internet, networking, and automative organizations by
+discussing their contributions and ideas for the V2X space. I like how they added little examples to each use case class
+it really solidified the idea. 
+
+\item {\it Weaknesses:}
+The table on page 4 was kinda pointless and listed redundant information that was described in better detail below the 
+table. They mention things like the road fusion function and what it does but don't really go into any detail on it.
+
+\item {\it Questions:} 
+To accomplish theses task in sections 2, and 3 a lot of data is needed. I question if 5G will be able to handle the needs
+of V2X. I'm also curious to see what companies will choose in order for a car to avoid an accident. For example, in order
+to avoid an accident will the car move to the side walk or run a red light potentially endangering civilians or other cars. 
+
+\item {\it Interesting citations:}
+I find any type of autonomous vehicles/drones to be a really cool topic because I seem to always picture the future with 
+robotics acting in such a way. And now with the implementation of 5G into our network a lot of these things come into 
+reality. That is why I find the white paper on automotive implications on 5G~\cite{perspectiveson} to be an interesting read. 
+This paper appears to tackle some interesting use cases relating to 5G from the automotive and transport and logistics 
+perspectives. 
+
+\item {\it Possible improvements:} 
+I think a background section would fit this paper very well, as I was a bit confused when they said so and so will be used
+to do such and such. 
+
+\item {\it Future work:} 
+Collision studies on what the car will choose to best avoid an accident. Such technologies could also be used for 
+space docking and other vehicles. I can also see to achieve excellent V2X communication the network will heavily 
+benefit and things that require higher throughput and really low latency will excel during this time. So you could say 
+a paper on what other technologies will benefit from enabling V2X communication. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+

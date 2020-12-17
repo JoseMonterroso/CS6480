@@ -1,0 +1,117 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 19.a\\}
+\author{Jose Monterroso}
+\affil{School of Computing, University of Utah}
+\begin{document}
+\maketitle
+\section{FALCON: An Accurate Real-Time Monitor for Client-Based Mobile Network Data Analytics}
+
+Paper discussed in this summary is ``FALCON: An Accurate Real-Time Monitor for Client-Based Mobile Network Data Analytics''~\cite{falcon}.
+
+\subsection{First pass information}
+\label{sec:first}
+\begin{enumerate}
+
+\item {\it Category:}
+This paper is a description of a research prototype. The research prototype being discussed is FALCON. 
+
+\item {\it Context:} 
+The technical area of this paper relates to mobile networking. Specifically, they are dealing with LTE and LTE-A.
+This paper relates to a few papers on LTE that we have read in the past. They discuss similar concepts like RNTIs
+in the security LTE~\cite{breakinglte} paper. The FALCON paper also references a recent paper on the BurstTracker
+~\cite{detectinglte}. Finally, I believe that FALCON can be applied to and lives in the same realm of 5G~\cite{5gwhite}.
+
+\item {\it Assumptions:}  
+They make a few assumptions relating to how OWL is currently the most reliable open-source instrument for
+continuous long-term monitoring. I've never worked with OWL but I think their assumption is valid as they 
+have made FALCON and appear to be experts on the subject. 
+
+\item {\it Contributions:}
+I couldn't find and directly stated of claimed contributions. However, they present FALCON which is 
+a fast analysis of LTE control channels. FALCON is also completely open source. 
+
+\item {\it Clarity:} 
+From what I have read this paper appears to be written well. However, this paper may be of shorter
+length than most, but it does contain a lot of jargon.
+
+\end{enumerate}
+\subsection{Second pass information}
+\label{sec:second}
+\begin{itemize}
+
+\item {\it Summary:}
+In this paper the authors present FALCON: Fast Analysis of LTE Control channels. FALCON is an 
+improved combination of existing open source softwares. FALCON is suitable for both long-term 
+and short-term monitoring of LTE resource allocation in non-ideal radio conditions. We first go into
+a little overview of control channel analysis. In this section we discuss PDCCH and DCI. We then 
+touch on a few challenges in DCI validation. A few approaches to the challenges include: signal
+power detection, re-encoding, RAR tracking, RNTI histograms, search space coherence and 
+shortcut decoding. FALCON provides a decoder, visualization tool, signal recorder and a remote 
+controller for synchronized capturing of multiple cells or mobile network operators. The signal 
+recorder used by FALCON is an extended version of OWL's recorder. FALCON's decoder is 
+capable of tracking either an online LTE signal or an offline recording and reliably decodes any 
+resource assignments from the cell's PDCCH in real time. We then slightly touch on the privacy 
+concerns of FALCON, but fear not, the payload within the allocated resources is encrypted and 
+cannot be decrypted without knowledge of the secret keys. Next, the authors evaluate FALCON.
+In the case of poor radio conditions FALCON outperforms OWL in average by three orders of 
+magnitude. Furthermore, FALCON does not filter out any meaningful DCI for RNTI in the value 
+range beyond the peak region. Lastly, they provide us with an application example of FALCON.
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:}
+The abstract did a good job on introducing me to the problem. I was hoping to get more from the introduction but 
+it didn't really work out. I think it's a huge strength that they provided FALCON as an open source tool. I thought
+it was a strength that they compared their tool with OWL (the best at the time).
+
+\item {\it Weaknesses:} 
+I hated the mix of the introduction with the related works section. The related works section took over the the whole
+section leaving a little paragraph briefly introducing FALCON. I wish they had used more figures to explain the 
+control channel analysis. The applicability in 5G section did not answer any questions whatsoever if FALCON 
+could be used in 5G. I wish they had provided more to their evaluation section. Not to be mean but overall this 
+paper was weak. I felt that I didn't learn much besides what FALCON is and what it can kind of do. 
+
+\item {\it Questions:}
+I'm not familiar with LTE so I would like to know the difference between LTE and LTE-A.
+
+\item {\it Interesting citations:} 
+It was because of my current final project on radio frequency propagation that I found the paper on 
+spectral efficiency ~\cite{spectralefficiency} to be an interesting read. 
+
+\item {\it Possible improvements:} 
+ I felt a bit lost when reading the paper and felt that they can improve by adding a background section
+ that can go more in depth with figures and examples on the control channel. More figures in general 
+ would vastly improve this paper. 
+
+\item {\it Future work:}
+I can totally see a future assignment where you can gather resource data using FALCON. They seem really
+uncertain in their response to if FALCON can be used in 5G so we could test it out. 
+
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+

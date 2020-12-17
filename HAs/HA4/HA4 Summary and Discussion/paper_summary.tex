@@ -1,0 +1,144 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 4.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{Network Function Virtualization Challenges and Opportunities for Innovations }
+
+Paper discussed in this summary is ``Network Function Virtualization Challenges and Opportunities for Innovations''~\cite{nfv}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:} 
+
+This paper is an analysis of an existing system. The system that the authors of this paper are analysis is Network 
+Function Virtualization (NFV). 
+
+\item {\it Context:} 
+
+The technical area of this paper relates to virtualization. This paper doesn't specifically relate to other papers we
+have read, however, virtualization is used in cloud computing~\cite{containerization,aview}. 
+
+\item {\it Assumptions:}  
+
+They assume that NFV is prospectively the unifying revolution among NFVs, SDN, and Cloud Computing, 
+offering more revenue opportunities in the services value chain. I don't entirely agree with their assumption
+that NFVs have more revenue opportunities because I didn't even know about NFVs existed before this paper.
+I'm more familiar and believe that cloud computing is more popular and produces more revenue. 
+
+\item {\it Contributions:} 
+
+Their contributions are as follows. They introduce NFVs architectural framework, describe several use cases of NFV, 
+they discuss the open NFV research issues and point out future directions for NFV.
+
+\item {\it Clarity:} 
+
+From what I have read I do think this paper is well written. The paper has good headings, and an explicit abstract and 
+introduction, compared to some of the previous papers we have read in the class that do not.  
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+
+The author's goal in this article is to bridge the gap by identifying critical research challenges involved in the
+evolution toward NFV. NFV implements network functions through software virtualization techniques and runs
+them on commodity hardware. The article discusses the creation of the Industry Specification Group for NFV
+to achieve the common architecture required to support VNFs. We then learn of some of the technical requirements
+of NFVs. Performance, manageability, reliability and stability, and security are some of these requirements. We then
+learn about the architectural framework, and see some use cases related to NFV. Lastly, the authors discuss a few
+research challenges and provide future directions of NFV.
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+
+\begin{itemize}
+
+\item {\it Strengths:} 
+
+I liked the papers abstract, I think it did a good job of introducing me to NFV and the papers content.  
+A strength in this paper is when they discuss the design and architectural framework. I felt that this section
+really helped me understand NFV. Furthermore, tying in the Use Cases section further enhanced my 
+understanding of NFVs through the use of real world examples. 
+
+\item {\it Weaknesses:} 
+
+Because this paper doesn't introduce a new idea, I can see why their related works section contains
+NFV activity and implementations. However, I don't really agree with the idea that this is considered
+related works. I think that they could have rather have a background section or have added parts to 
+the introduction. Another weakness I found was in the Technical Requirements section. They tell us
+to understand the maximum achievable performance of the underlying programmable hardware 
+platforms. And from this information we can make a reasonable design for NFV. I feel that this is a lazy 
+way of saying make sure you check the specs of your hardware before you buy it, rather than actually
+providing a good technical requirement they claim to help with. 
+
+\item {\it Questions:} 
+
+The authors made it seem like a VNF forwarding graph was a big deal, but hardly went into detail. So 
+I have some questions about VNF forwarding graphs. 
+
+\item {\it Interesting citations:} 
+
+I was interested in the idea of IPTV~\cite{iptv} so I decided to look into one of the references that the authors list. 
+
+\item {\it Possible improvements:} 
+
+I thought the paper did a good job of providing an overall introduction to NFV. However, I do wish
+they would have gone into a little more detail in the design and architectural framework section. A 
+lot of concepts and idea were brought up but not much was said about how these things are used 
+or work together with other NFV technologies. 
+
+\item {\it Future work:} 
+
+As the paper mentions toward the end, efficient management and orchestration of VNFs is a 
+challenging issue that not many people have found great solutions too. This paper is a bit old 
+so I bet some people may have discovered new methods, but I do think this would be an interesting
+thing to research. I've also never new IPTV was a thing, so I think this could be a potential future 
+research subject. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

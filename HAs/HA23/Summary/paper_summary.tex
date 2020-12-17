@@ -1,0 +1,110 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+\title{CS 6480: Paper reading summary\\
+HA 23.a\\}
+\author{Jose Monterroso}
+\affil{School of Computing, University of Utah}
+\begin{document}
+\maketitle
+\section{On the Needs and Requirements Arising from Connected and Automated Driving}
+
+Paper discussed in this summary is ``On the Needs and Requirements Arising from Connected and Automated Driving'~\cite{ontheneeds}.
+
+\subsection{First pass information}
+\label{sec:first}
+\begin{enumerate}
+
+\item {\it Category:} 
+This paper is an analysis of an existing system as well as a description of a research prototype. The existing system
+that is being analyzed is 5G's ability to support mission-critical Vehicle-to-Everything communications. While the research
+prototype revolves around the main vehicle-to-Everything application categories and their representative use cases selected
+based on the analysis of the future needs of cooperative and automated driving. 
+
+\item {\it Context:} 
+The technical area of this paper relates to mobile networking, specifically 5G~\cite{5gwhite}. And Vehicle-to-Everything (V2X)
+communications. This will be our first V2X paper so not much can relate to this paper.
+
+\item {\it Assumptions:}  
+The authors make a few assumptions relating to the fact that 5G has made V2X a mission-critical goal for their network.
+I think their assumptions is valid as they tell us of how, ADAS, 3GPP, ETSI, ITS, 5GAA, and 5GCAR have all been brought
+together to figure out how and why V2X can be put together within 5G.
+
+\item {\it Contributions:} 
+The paper's main contributions are as follows. First, they identify representative use cases that are based on an 
+analysis of the demands arising from connected and automated driving. Secondly, they study the selected use cases in 
+more detail to identify the corresponding challenging requirements and derive the key performance indicators (KPIs). And 
+lastly, based on the identified use cases and requirements, they discuss the existing V2X technologies and solutions and
+point out valuable future research directions for satisfying the stringent requirements. 
+
+\item {\it Clarity:}
+From what I have read in the first pass this paper appears to be written well.
+
+\end{enumerate}
+\subsection{Second pass information}
+\label{sec:second}
+\begin{itemize}
+
+\item {\it Summary:} 
+The authors of this paper provide a description of the main V2X application categories and their representative use
+cases selected based on an analysis of the future needs of cooperative and automated driving. In this paper they 
+summarize and extend the key findings of the 5GCAR project in terms of use cases that form building blocks for 
+connected automated driving. Section 4 proposes a methodology for deriving the requirements on the communication
+systems from the automative requirements, which is then applied to specify the requirements for the selected use 
+cases.The authors define the automotive and network KPIs; then, they discuss the interrelations between them.
+Section 5 draws the perspective between the use case and requirements previously identified and the one defined 
+by the community, principally 3GPP and the 5GAA. Section 6 reviews related work and future research challenges.
+Finally, section 7 gives a conclusion to the paper.
+
+\end{itemize}
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+Table 2 does a great job of simplifying and combining the overall data of each use case with the needed requirements.
+I like section 5 because it goes back to what the original idea makers had when envisioning V2X. We see that from 
+different committees (3GPP, 5GCAR) has similar and different use cases ideas for V2X. I though that the technical
+challenges posed in section 6 brought a good sense of what needs to be done before we can get good V2X
+communication. Not only that but they provide a table with technical solutions that can be applied to improve the 
+identified challenges. 
+
+\item {\it Weaknesses:} 
+Some of the communication network KPIs didn't really make much sense to me. Especially interpreting figure 6
+was a bit difficult. A lot of the number used in the use case section with KPIs seemed a little off. They didn't really
+explained where they got the number they kind of just show up and told us to consider them. 
+
+\item {\it Questions:} I question a lot of the numbers they throw up in the section 4. Some make sense but others
+seem a bit creative.
+
+\item {\it Interesting citations:} 
+After reading this paper a lot comes to mind relating to the sheer number of sensors and little gadgets within a car
+that needs to be working properly at all time. Now you can image in a busy traffic area where these sensors still need
+to be in tip-top shape to keep the passenger safe. Given my research project that relates to propagation models for 
+radio frequencies in POWDER, I found the paper on vehicular communications~\cite{vehicularcomm} that deals with
+channel and propagation models to be and interesting citation. I can see how this might be useful information for cars
+in crowded areas.
+
+\item {\it Possible improvements:} 
+I honestly think that they can remove section 4 and just use table 2 to explain the ideas for each use case. Section
+4 has a lots of overused data that in my opinions looks a lot nicer within the table. I would have like to have seen more 
+evaluation about why the different organizations chose different use cases and how that could have an effect on V2X.
+
+\item {\it Future work:} 
+A future work idea I am interested in is studying propagation models using vehicular communications or even mobile
+UEs. 
+
+
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+

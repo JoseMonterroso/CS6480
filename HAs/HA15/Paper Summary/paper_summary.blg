@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper_summary.aux
+The style file: acm.bst
+Database file #1: biblio.bib
+Warning--empty journal in ngmn
+You've used 4 entries,
+            2253 wiz_defined-function locations,
+            549 strings with 4470 characters,
+and the built_in function-call counts, 1103 in all, are:
+= -- 100
+> -- 63
+< -- 0
++ -- 26
+- -- 22
+* -- 87
+:= -- 201
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 35
+empty$ -- 77
+format.name$ -- 22
+if$ -- 212
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 22
+num.names$ -- 8
+pop$ -- 19
+preamble$ -- 1
+purify$ -- 19
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 39
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 1
+while$ -- 10
+width$ -- 5
+write$ -- 37
+(There was 1 warning)

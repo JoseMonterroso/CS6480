@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{5gnetworkper}
+{\sc group, S.~R.}
+\newblock A global perspective of 5g network performance.
+\newblock {\em Signals Research Group\/} (Oct. 2019).
+
+\bibitem{5gwhite}
+{\sc group companies, N.}
+\newblock Making 5g a reality.
+\newblock {\em NEC White Paper\/}.
+
+\bibitem{measurementstudy}
+{\sc Xu, D., Zhou, A., Zhang, Z., Wang, G., Liu, X., An, C., Shi, Y., Liu, L.,
+  and Ma, H.}
+\newblock Understanding operational 5g: A first measurement study on its
+  coverage, performance and energy consumption.
+\newblock {\em SIGCOMM '20: Proceedings of the Annual conference of the ACM
+  Special Interest Group on Data Communication on the applications,
+  technologies, architectures, and protocols for computer communication\/}
+  (July 2020), 479--494.
+
+\end{thebibliography}

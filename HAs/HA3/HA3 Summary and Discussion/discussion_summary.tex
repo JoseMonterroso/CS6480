@@ -1,0 +1,142 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Class discussion summary\\
+HA 3.b\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+\begin{document}
+\maketitle
+\section*{Discussion summary}
+\begin{itemize}
+
+\item {\it Summary:} 
+We spent quite a bit of time discussing the abstract and the the introduction. It was brought to our
+attention that these two sections are considered to be great sections to mimic if we decided to do a systems
+paper of our own. What's great about these sections is that they present the problem up front and lay 
+the groundwork/background for the more technical sections later on. We then moved on to talk about 
+east and west traffic. This was one of the questions I had. East west traffic is a way of interpretting
+how microservices interact with other microservices. And this lead to our main discussion on eZTrust.
+In traditional firewall approach we write up rules for ip address and ports, but for microservices this doesn't
+apply. So what eZTrust does is use eBPF's eTagger and eVerifier to add context tags to each packet 
+and upon arrival it verifies the packet by checking its tag. 
+
+
+\item {\it Strengths and weaknesses:} 
+Towards the end of the class we spent sometime discussing some pros and cons regarding the paper. I'd 
+say that overall there was mixed feelings about this paper. Of the parts we discussed it was brought up that 
+the abstract and introduction were good. Another strength that was discussed were the graphs, algorithms, 
+figures, and tables. Figure 1 and 2
+really brought out the design ideas, and put the logic into concrete visualizations. One final strength that was brought up 
+was the organization of the paper. In previous papers that we have discussed they were lacking concrete sections.
+But this paper does a great job of introduction the problem and solution, explaining eZTrust's design and evaluating
+its performance compared to other related works.  Now the weaknesses mentioned during our discussion related
+to the contents of the paper. They present a new system for security, but rather than focusing on the security aspects
+and analysing new potential flaws, they focus on evaluating their performance. It's really weird to design a security 
+system and not focus on its security abilities. 
+
+\item {\it Connection with other work:} 
+During this discussing at least, there wasn't any mentions or talks of other papers. But from my knowledge this paper
+talks about microservices, lightweight containers, and containerization. All of these topics relate to our HA2 paper "Containerization 
+and the PaaS Cloud. " 
+
+\item {\it Future work:} 
+We brought up the ideas of eBPF and how on a packet per packet basis it can use the eTagger, and eVerifier
+I think there is a lot of potential for this type of system. This can be used to trace packets, or get data regarding 
+on how microservices use packets. 
+
+\end{itemize}
+
+
+\end{document}
+
+\begin{comment}
+*Abstract 
+	=> good abstract, it tells you the problem up hand 
+	=> micro serivce architrue opens up new attacks
+
+*Cross service dependencies
+	=> two microserrvices in the packet end 
+	
+*Traffic used to come in North South
+	=> But now microservices that interact with other microservices is like an east west direction
+
+*In a traditional firewall approach 
+	=> you right the rules for ip address and port
+	=> does not apply to microservices because they change for them 
+	
+We want the context of each service but we want a skinny packet
+	=> so we created a tag for each mircoservice 
+	
+Introduction is good because it is similar to abstract where it provides rough layout with small details in each section
+	=> The Introduction builds on the abstract by providing more details 
+	=> pretty good model for systems paper 
+	
+We listed the 3 contributions
+	=> pretty generic list of contributions 
+	
+Related work (good)
+	=> good that they go through others projects and show how eZTrust can solve what they are lacking 
+	
+Threat model
+	=> lots of assumptions 
+	=> descriptions of different attack vectors 
+		=> here are the boundaries of my work, you box yourself in 
+	=> Needs examples 
+		
+Need to focus on performance 
+
+Good strategy to give a small examples and then list the requirments 
+
+eBPF - In the etagger and the everfier 
+
+etagger puts the tag in the packet, egress
+everifier , ingress 
+	=> 4 step process
+	
+etracer, used to create the contrext 
+
+harvester, interacts with microservices to collect context 
+
+*Discussed pros and cons of paper
+	=>Pros 
+		abstract, introduction, evaluation, good organized, graphs, formatted well, motivational topics, diagrams 
+		
+	=> Cons
+		some places were hard to read, and not fully fleshed
+		How there paper introduces new security issues but they are not address
+		doesn't really evaluate their security beneffits just performance things 
+		The threat model was not good enough, could have been better points that they resolve  
+		
+		
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

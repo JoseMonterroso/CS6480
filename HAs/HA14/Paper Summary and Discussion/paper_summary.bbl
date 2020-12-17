@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{ndn}
+{\sc Afanasyev, A., Burke, J., Refaei, T., Wang, L., Zhang, B., and L., Z.}
+\newblock A brief introduction to named data networking.
+\newblock {\em MILCOM 2018 - 2018 IEEE Military Communications Conference\/}
+  (Oct. 2018).
+
+\bibitem{darpa}
+{\sc Clark, D.}
+\newblock The design philosophy of the darpa internet protocols.
+\newblock {\em ACM SIGCOM Computer Communication Review\/} (Aug. 1988).
+
+\bibitem{tussle}
+{\sc Clark, D., Wroclawski, J., Sollins, K., and R., B.}
+\newblock Tussle in cyberspace: defining tomorrow's internet.
+\newblock {\em SIGCOMM'02\/} (June 2005), 462--475.
+
+\bibitem{xia}
+{\sc Naylor, D., Mukerjee, M., Agyapong, P., Grandl, R., Kang, R., Machado, M.,
+  Brown, S., Doucetta, C., Hsiao, H., Han, D., kim, T., Lim, H., Ovon, C.,
+  Zhou, D., Lee, S., Lin, Y., Stuart, C., Barrett, D., Akella, A., Andersen,
+  D., Byers, J., Dabbish, L., Kaminsky, M., Kielser, S., Peha, J., Perrig, A.,
+  Seshan, S., Sirbu, M., and Steenkiste, P.}
+\newblock Xia: Architecting a more trustworthy and evolvable internet.
+\newblock {\em ACM SIGCOMM Computer Communication Review\/} (July 2014).
+
+\bibitem{serval}
+{\sc Nordstrom, E., Shue, D., Gopalan, P., Kiefer, R., Arye, M., Ko, s.,
+  Rexford, J., and Freedman, M.}
+\newblock Serval: An end-host stack for service-centric networking.
+\newblock {\em 9th USENIX Symposium on Networked Systems Design and
+  Implementations\/} (Apr. 2012).
+
+\end{thebibliography}

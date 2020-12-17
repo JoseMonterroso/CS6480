@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{iptv}
+{\sc Aggarwal, V., Gopalakrishnan, V., Jana, R., Ramakrishnan, K., and
+  Vaishampayan, V.}
+\newblock Optimizing cloud resources for delivering iptv services through
+  virtualization.
+\newblock {\em 2012 Fourth International Conference on Communication Systems
+  and Networks\/} (Jan. 2012).
+
+\bibitem{aview}
+{\sc Armbrust, M., Fox, A., Griffith, R., Joseph, A., Katz, R., Konwinski, A.,
+  Lee, G., Patterson, D., Rakin, A., Stoica, I., and Zaharia, M.}
+\newblock A view of cloud computing.
+\newblock {\em Communications of the ACM 53}, 4 (Apr. 2010), 50--58.
+
+\bibitem{nfv}
+{\sc Han, B., Gopalakrishnan, V., Ji, L., and Lee, S.}
+\newblock Network function virtualization: Challenges and opportunities for
+  innovations.
+\newblock {\em IEEE Communications Magazine\/} (Feb. 2015), 90--97.
+
+\bibitem{containerization}
+{\sc Pahl, C.}
+\newblock Containerization and the paas cloud.
+\newblock {\em IEEE Cloud Computing 2\/} (July 2015), 24--31.
+
+\end{thebibliography}

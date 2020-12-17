@@ -1,0 +1,143 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{epsfig,xspace,url}
+\usepackage{authblk}
+
+
+\title{CS 6480: Paper reading summary\\
+HA 5.a\\}
+\author{José Monterroso}
+\affil{School of Computing, University of Utah}
+
+\begin{document}
+
+\maketitle
+\section{OpenNetVM: A Platform for High Performance Network Service Chains}
+
+Paper discussed in this summary is ``OpenNetVM: A Platform for High Performance Network Service Chains''~\cite{opennetvm}.
+
+\subsection{First pass information}
+\label{sec:first}
+
+\begin{enumerate}
+
+\item {\it Category:} 
+
+This paper is a description of the OpenNetVM research prototype. OpenNetVM is a platform for high performance 
+network service chains. 
+
+\item {\it Context:}
+
+The technical area of this paper relates to network function virtualization (NFV), and how we can get high 
+performance for service chains. This paper relates to a few papers we have read in the past for example
+last time we read about NFV~\cite{nfv}, they also reference Docker and its containers~\cite{containerization}.
+
+\item {\it Assumptions:}  
+
+A major assumption that the authors of the paper make is that they assume that NFV research can grow
+with the development of a flexible and efficient platform enabling high performance NFV implementations.
+I think their assumption is valid because when you implement something that everyone can use
+without having to make the user redefine nor create difficult things, that area of research expands because it becomes
+simpler for all those working in it. 
+
+\item {\it Contributions:} 
+
+The paper contributes by combining multiple NF techniques into an efficient and easy to use platform that is available
+ for the community to use.  
+
+\item {\it Clarity:} 
+
+From what I have read so far I do believe that this paper is well written. 
+
+\end{enumerate}
+
+\subsection{Second pass information}
+\label{sec:second}
+
+\begin{itemize}
+
+\item {\it Summary:} 
+
+The writers of this paper created OpenNetVM to produce a flexible and efficient platform enabling high 
+performance NFV. OpenNetVM based on the NetVM architecture runs network functions in lightweight 
+Docker containers, and provides load balancing, flexible flow management and service name abstractions.
+Furthermore, OpenNetVM uses DPDK for high performance I/O, and efficiently routes packets through 
+dynamically created service chains. OpenNetVM is split between the NF Manager which interfaces with the 
+NIC, and the NFLib which provides the API within an NF to interact with the manager. These two components
+help OpenNetVM to become flexible and fast. Lastly, OpenNetVM is evaluated to achieve throughputs of 68
+Gbps when load balancing across two NF replicas, and 40 Gbps when traversing a chain of five NFs.
+
+\end{itemize}
+
+\subsection{Third pass information}
+\label{sec:third}
+\begin{itemize}
+
+\item {\it Strengths:} 
+
+I really liked the abstract. The abstract caught my attention, presented the problem they are trying to solve, and 
+offered their solution. It was just enough information that made me want to read more, but not to much information 
+that told me the whole story. Furthermore, the Background \& Related Works section does a great job of providing 
+similar technologies, while also downplaying them because of their flaws. This results in the authors telling us why
+OpenNetVM is better because it solves these problems. I also liked their evaluation section, I think they did 
+a decent job of leveling the playing field between the two systems that were being compared. 
+
+\item {\it Weaknesses:} 
+
+I really didn't like the last half of the introduction. It was a bit odd to just mention things about NF. Maybe it would 
+have been better applied to the Background \& Related Works section. I felt like the Evaluation section could have used more
+content, I just didn't feel too convinced about OpenNetVM.
+
+\item {\it Questions:} 
+
+Honestly I do not have any questions. I think they did a great job of explaining OpenNetVM and its uses. 
+
+\item {\it Interesting citations:}
+
+Last time we spoke of the differences and striking similarities between SDN and NFV. This paper seems to
+offer an interesting reference to network function virtualization in SDN and OpenFlow ~\cite{nfvsdn}
+
+\item {\it Possible improvements:} 
+
+I think if they fixed the weird second half of the introduction, and moved that content to a Background
+section, the paper would improve. Furthermore, I wish they would have added more to the Evaluation section.
+The Evaluation section was a bit short and lacked content in my opinion. 
+
+\item {\it Future work:} 
+
+They mention how small improvements like using RSS hash to simplify packet lookups can significantly
+improve the performance. I guess future work related to OpenNetVM could be finding these little
+improvements to help OpenNetVM performance. I would also be interested in doing some research
+into service chaining. Service chaining seems to be very popular among NFV so I believe there could
+be a better or even faster way of doing service chaining. 
+
+\end{itemize}
+
+{
+  \small 
+  \bibliographystyle{acm}
+  \bibliography{biblio}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{ndn}
+{\sc Afanasyev, A., Burke, J., Refaei, T., Wang, L., Zhang, B., and L., Z.}
+\newblock A brief introduction to named data networking.
+\newblock {\em MILCOM 2018 - 2018 IEEE Military Communications Conference\/}
+  (Oct. 2018).
+
+\bibitem{darpa}
+{\sc Clark, D.}
+\newblock The design philosophy of the darpa internet protocols.
+\newblock {\em ACM SIGCOM Computer Communication Review\/} (Aug. 1988).
+
+\bibitem{ndndos}
+{\sc Gasti, P., Tsudik, G., Uzun, E., and Zhang, L.}
+\newblock Dos and ddos in named data networking.
+\newblock {\em 2013 22nd International Conference on Computer Communication and
+  Networks\/} (Oct. 2013).
+
+\end{thebibliography}

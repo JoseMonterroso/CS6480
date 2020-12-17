@@ -1,0 +1,14 @@
+PART 3: COMMANDS
+-------------------
+
+python orchestrator.py -h
+python orchestrator.py -u ha hb r1 r2 r3
+python orchestrator.py -o r1 r2 r3
+python orchestrator.py -p ha 10.0.19.0/24 10.0.14.4
+python orchestrator.py -p hb 10.0.14.0/24 10.0.19.3
+python orchestrator.py -u r4
+python orchestrator.py -o r4
+python orchestrator.py -s
+python orchestrator.py -n
+<Maybe south again to properly remove r2>
+python orchestrator.py -r r2

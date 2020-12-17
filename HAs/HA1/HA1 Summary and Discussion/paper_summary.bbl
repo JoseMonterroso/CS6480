@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{aview}
+{\sc Armbrust, M., Fox, A., Griffith, R., Joseph, A., Katz, R., Konwinski, A.,
+  Lee, G., Patterson, D., Rakin, A., Stoica, I., and Zaharia, M.}
+\newblock A view of cloud computing.
+\newblock {\em Communications of the ACM 53}, 4 (Apr. 2010), 50--58.
+
+\bibitem{fbi}
+{\sc McMillan, R.}
+\newblock Fbi raids dallas internet service provider core ip.
+\newblock {\em PCWorld\/} (Apr. 2009).
+
+\end{thebibliography}
