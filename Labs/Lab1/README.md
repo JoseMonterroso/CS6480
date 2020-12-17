@@ -4,3 +4,4 @@ There are three goals associated with this assignment. First is to introduce stu
 
 For the final part of this assignment you will be required to realize a simple NFV-enabled routed network and to develop a basic OSPF NFV “orchestrator”’ to perform dynamic, zero-impact, network modifications.
 
+Used docker and to create networked topology. Added OSPF to configure routers and created python orchestrator file to mitigate tasks to containers. Endgame was 0% packet-drop on router route replacement.
